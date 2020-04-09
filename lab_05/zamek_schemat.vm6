@@ -1,0 +1,1179 @@
+NDS Database:  version P.20131013
+
+NDS_INFO | xc9500xl | 9572XL44PC | XC9572XL-10-PC44
+
+DEVICE | 9572XL | 9572XL44PC | 
+
+NETWORK | zamek_schemat | 0 | 0 | 16391
+
+INPUT_INSTANCE | 0 | 0 | NULL | PS2_Clk_IBUF | zamek_schemat_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | PS2_Clk | 3020 | PI | 0 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | PS2_Clk_IBUF | 2994 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | PS2_Clk_IBUF | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | PrldLow+Tff+OptxMapped | XLXI_2/Cnt<0> | zamek_schemat_COPY_0_COPY_0 | 2155877376 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | PS2_Clk_IBUF | 2994 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | PS2_Clk_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT.UIM | 3019 | ? | 0 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT.Q | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | XLXI_2/Cnt<0> | 2995 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/Cnt<0>.Q | XLXI_2/Cnt<0> | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | XLXI_2/Cnt<0>.SI | XLXI_2/Cnt<0> | 0 | 2 | 4
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | PS2_Clk_IBUF | 2994 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | PS2_Clk_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT.UIM | 3019 | ? | 0 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT.Q | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | XLXI_2/Cnt<0>.D1 | 3025 | ? | 0 | 4096 | XLXI_2/Cnt<0> | NULL | NULL | XLXI_2/Cnt<0>.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | XLXI_2/Cnt<0>.D2 | 3026 | ? | 0 | 4096 | XLXI_2/Cnt<0> | NULL | NULL | XLXI_2/Cnt<0>.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_DC
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | XLXI_2/Cnt<0>.CLKF | 3027 | ? | 52 | 4096 | XLXI_2/Cnt<0> | NULL | NULL | XLXI_2/Cnt<0>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_FALSE | PS2_Clk_IBUF
+OUTPUT_NODE_TYPE | 6 | 9 | MC_SI_RSTF
+SIGNAL | NODE | XLXI_2/Cnt<0>.RSTF | 3028 | ? | 0 | 4096 | XLXI_2/Cnt<0> | NULL | NULL | XLXI_2/Cnt<0>.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_FALSE | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT.UIM
+
+SRFF_INSTANCE | XLXI_2/Cnt<0>.REG | XLXI_2/Cnt<0> | 0 | 3 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | XLXI_2/Cnt<0>.D | 3024 | ? | 0 | 0 | XLXI_2/Cnt<0> | NULL | NULL | XLXI_2/Cnt<0>.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | XLXI_2/Cnt<0>.CLKF | 3027 | ? | 52 | 4096 | XLXI_2/Cnt<0> | NULL | NULL | XLXI_2/Cnt<0>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_FALSE | PS2_Clk_IBUF
+INPUT_NODE_TYPE | 3 | 8 | SRFF_R
+SIGNAL | NODE | XLXI_2/Cnt<0>.RSTF | 3028 | ? | 0 | 4096 | XLXI_2/Cnt<0> | NULL | NULL | XLXI_2/Cnt<0>.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_FALSE | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT.UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | XLXI_2/Cnt<0>.Q | 3029 | ? | 52 | 0 | XLXI_2/Cnt<0> | NULL | NULL | XLXI_2/Cnt<0>.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Tff+OptxMapped | XLXI_2/Cnt<1> | zamek_schemat_COPY_0_COPY_0 | 2155877376 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_2/Cnt<0> | 2995 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/Cnt<0>.Q | XLXI_2/Cnt<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | PS2_Clk_IBUF | 2994 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | PS2_Clk_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT.UIM | 3019 | ? | 0 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT.Q | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | XLXI_2/Cnt<1> | 2996 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/Cnt<1>.Q | XLXI_2/Cnt<1> | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | XLXI_2/Cnt<1>.SI | XLXI_2/Cnt<1> | 0 | 3 | 4
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_2/Cnt<0> | 2995 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/Cnt<0>.Q | XLXI_2/Cnt<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | PS2_Clk_IBUF | 2994 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | PS2_Clk_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT.UIM | 3019 | ? | 0 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT.Q | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | XLXI_2/Cnt<1>.D1 | 3031 | ? | 0 | 0 | XLXI_2/Cnt<1> | NULL | NULL | XLXI_2/Cnt<1>.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | XLXI_2/Cnt<1>.D2 | 3032 | ? | 0 | 4096 | XLXI_2/Cnt<1> | NULL | NULL | XLXI_2/Cnt<1>.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | XLXI_2/Cnt<0>
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | XLXI_2/Cnt<1>.CLKF | 3033 | ? | 52 | 4096 | XLXI_2/Cnt<1> | NULL | NULL | XLXI_2/Cnt<1>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_FALSE | PS2_Clk_IBUF
+OUTPUT_NODE_TYPE | 6 | 9 | MC_SI_RSTF
+SIGNAL | NODE | XLXI_2/Cnt<1>.RSTF | 3034 | ? | 0 | 4096 | XLXI_2/Cnt<1> | NULL | NULL | XLXI_2/Cnt<1>.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_FALSE | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT.UIM
+
+SRFF_INSTANCE | XLXI_2/Cnt<1>.REG | XLXI_2/Cnt<1> | 0 | 3 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | XLXI_2/Cnt<1>.D | 3030 | ? | 0 | 0 | XLXI_2/Cnt<1> | NULL | NULL | XLXI_2/Cnt<1>.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | XLXI_2/Cnt<1>.CLKF | 3033 | ? | 52 | 4096 | XLXI_2/Cnt<1> | NULL | NULL | XLXI_2/Cnt<1>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_FALSE | PS2_Clk_IBUF
+INPUT_NODE_TYPE | 3 | 8 | SRFF_R
+SIGNAL | NODE | XLXI_2/Cnt<1>.RSTF | 3034 | ? | 0 | 4096 | XLXI_2/Cnt<1> | NULL | NULL | XLXI_2/Cnt<1>.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_FALSE | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT.UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | XLXI_2/Cnt<1>.Q | 3035 | ? | 52 | 0 | XLXI_2/Cnt<1> | NULL | NULL | XLXI_2/Cnt<1>.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Tff+OptxMapped | XLXI_2/Cnt<2> | zamek_schemat_COPY_0_COPY_0 | 2155877376 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_2/Cnt<0> | 2995 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/Cnt<0>.Q | XLXI_2/Cnt<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_2/Cnt<1> | 2996 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/Cnt<1>.Q | XLXI_2/Cnt<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | PS2_Clk_IBUF | 2994 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | PS2_Clk_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT.UIM | 3019 | ? | 0 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT.Q | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | XLXI_2/Cnt<2> | 2997 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/Cnt<2>.Q | XLXI_2/Cnt<2> | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | XLXI_2/Cnt<2>.SI | XLXI_2/Cnt<2> | 0 | 4 | 4
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_2/Cnt<0> | 2995 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/Cnt<0>.Q | XLXI_2/Cnt<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_2/Cnt<1> | 2996 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/Cnt<1>.Q | XLXI_2/Cnt<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | PS2_Clk_IBUF | 2994 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | PS2_Clk_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT.UIM | 3019 | ? | 0 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT.Q | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | XLXI_2/Cnt<2>.D1 | 3037 | ? | 0 | 0 | XLXI_2/Cnt<2> | NULL | NULL | XLXI_2/Cnt<2>.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | XLXI_2/Cnt<2>.D2 | 3038 | ? | 0 | 4096 | XLXI_2/Cnt<2> | NULL | NULL | XLXI_2/Cnt<2>.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | XLXI_2/Cnt<0> | IV_TRUE | XLXI_2/Cnt<1>
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | XLXI_2/Cnt<2>.CLKF | 3039 | ? | 52 | 4096 | XLXI_2/Cnt<2> | NULL | NULL | XLXI_2/Cnt<2>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_FALSE | PS2_Clk_IBUF
+OUTPUT_NODE_TYPE | 6 | 9 | MC_SI_RSTF
+SIGNAL | NODE | XLXI_2/Cnt<2>.RSTF | 3040 | ? | 0 | 4096 | XLXI_2/Cnt<2> | NULL | NULL | XLXI_2/Cnt<2>.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_FALSE | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT.UIM
+
+SRFF_INSTANCE | XLXI_2/Cnt<2>.REG | XLXI_2/Cnt<2> | 0 | 3 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | XLXI_2/Cnt<2>.D | 3036 | ? | 0 | 0 | XLXI_2/Cnt<2> | NULL | NULL | XLXI_2/Cnt<2>.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | XLXI_2/Cnt<2>.CLKF | 3039 | ? | 52 | 4096 | XLXI_2/Cnt<2> | NULL | NULL | XLXI_2/Cnt<2>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_FALSE | PS2_Clk_IBUF
+INPUT_NODE_TYPE | 3 | 8 | SRFF_R
+SIGNAL | NODE | XLXI_2/Cnt<2>.RSTF | 3040 | ? | 0 | 4096 | XLXI_2/Cnt<2> | NULL | NULL | XLXI_2/Cnt<2>.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_FALSE | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT.UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | XLXI_2/Cnt<2>.Q | 3041 | ? | 52 | 0 | XLXI_2/Cnt<2> | NULL | NULL | XLXI_2/Cnt<2>.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Tff+OptxMapped | XLXI_2/Cnt<3> | zamek_schemat_COPY_0_COPY_0 | 2155877376 | 5 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_2/Cnt<0> | 2995 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/Cnt<0>.Q | XLXI_2/Cnt<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_2/Cnt<1> | 2996 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/Cnt<1>.Q | XLXI_2/Cnt<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_2/Cnt<2> | 2997 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/Cnt<2>.Q | XLXI_2/Cnt<2> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | PS2_Clk_IBUF | 2994 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | PS2_Clk_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT.UIM | 3019 | ? | 0 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT.Q | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | XLXI_2/Cnt<3> | 2998 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/Cnt<3>.Q | XLXI_2/Cnt<3> | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | XLXI_2/Cnt<3>.SI | XLXI_2/Cnt<3> | 0 | 5 | 4
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_2/Cnt<0> | 2995 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/Cnt<0>.Q | XLXI_2/Cnt<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_2/Cnt<1> | 2996 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/Cnt<1>.Q | XLXI_2/Cnt<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_2/Cnt<2> | 2997 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/Cnt<2>.Q | XLXI_2/Cnt<2> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | PS2_Clk_IBUF | 2994 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | PS2_Clk_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT.UIM | 3019 | ? | 0 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT.Q | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | XLXI_2/Cnt<3>.D1 | 3043 | ? | 0 | 0 | XLXI_2/Cnt<3> | NULL | NULL | XLXI_2/Cnt<3>.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | XLXI_2/Cnt<3>.D2 | 3044 | ? | 0 | 4096 | XLXI_2/Cnt<3> | NULL | NULL | XLXI_2/Cnt<3>.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_TRUE | XLXI_2/Cnt<0> | IV_TRUE | XLXI_2/Cnt<1> | IV_TRUE | XLXI_2/Cnt<2>
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | XLXI_2/Cnt<3>.CLKF | 3045 | ? | 52 | 4096 | XLXI_2/Cnt<3> | NULL | NULL | XLXI_2/Cnt<3>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_FALSE | PS2_Clk_IBUF
+OUTPUT_NODE_TYPE | 6 | 9 | MC_SI_RSTF
+SIGNAL | NODE | XLXI_2/Cnt<3>.RSTF | 3046 | ? | 0 | 4096 | XLXI_2/Cnt<3> | NULL | NULL | XLXI_2/Cnt<3>.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_FALSE | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT.UIM
+
+SRFF_INSTANCE | XLXI_2/Cnt<3>.REG | XLXI_2/Cnt<3> | 0 | 3 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | XLXI_2/Cnt<3>.D | 3042 | ? | 0 | 0 | XLXI_2/Cnt<3> | NULL | NULL | XLXI_2/Cnt<3>.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | XLXI_2/Cnt<3>.CLKF | 3045 | ? | 52 | 4096 | XLXI_2/Cnt<3> | NULL | NULL | XLXI_2/Cnt<3>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_FALSE | PS2_Clk_IBUF
+INPUT_NODE_TYPE | 3 | 8 | SRFF_R
+SIGNAL | NODE | XLXI_2/Cnt<3>.RSTF | 3046 | ? | 0 | 4096 | XLXI_2/Cnt<3> | NULL | NULL | XLXI_2/Cnt<3>.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_FALSE | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT.UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | XLXI_2/Cnt<3>.Q | 3047 | ? | 52 | 0 | XLXI_2/Cnt<3> | NULL | NULL | XLXI_2/Cnt<3>.REG | 0 | 8 | SRFF_Q
+
+INPUT_INSTANCE | 0 | 0 | NULL | CLK_IBUF | zamek_schemat_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | CLK | 3021 | PI | 45 | 0 | zamek_schemat_COPY_0_COPY_0 | PERIOD_CLK;PERIOD_CLK | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 3 | 5 | II_FCLK
+NODE | CLK_IBUF/FCLK | 2999 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | CLK_IBUF | 3 | 5 | II_FCLK
+
+INPUT_INSTANCE | 0 | 0 | NULL | Reset_IBUF | zamek_schemat_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | Reset | 3022 | PI | 0 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | Reset_IBUF | 3000 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | Reset_IBUF | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped | XLXI_1/state_FSM_FFd3 | zamek_schemat_COPY_0_COPY_0 | 2155873280 | 16 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Reset_IBUF | 3000 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | Reset_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd3 | 3001 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd3.Q | XLXI_1/state_FSM_FFd3 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_2 | 3010 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_2.Q | XLXN_2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd1 | 3002 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd1.Q | XLXI_1/state_FSM_FFd1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd4 | 3004 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd4.Q | XLXI_1/state_FSM_FFd4 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<4> | 3005 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<4>.Q | XLXN_1<4> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<0> | 3006 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<0>.Q | XLXN_1<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<1> | 3007 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<1>.Q | XLXN_1<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<6> | 3008 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<6>.Q | XLXN_1<6> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<7> | 3009 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<7>.Q | XLXN_1<7> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<2> | 3011 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<2>.Q | XLXN_1<2> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<3> | 3012 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<3>.Q | XLXN_1<3> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<5> | 3013 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<5>.Q | XLXN_1<5> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd2 | 3003 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd2.Q | XLXI_1/state_FSM_FFd2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | CLK_IBUF/FCLK | 2999 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | CLK_IBUF | 3 | 5 | II_FCLK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd2.EXP | 3147 | ? | 47 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd2.EXP | XLXI_1/state_FSM_FFd2 | 4 | 0 | MC_EXPORT
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | XLXI_1/state_FSM_FFd3 | 3001 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd3.Q | XLXI_1/state_FSM_FFd3 | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | XLXI_1/state_FSM_FFd3.SI | XLXI_1/state_FSM_FFd3 | 0 | 15 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Reset_IBUF | 3000 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | Reset_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd3 | 3001 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd3.Q | XLXI_1/state_FSM_FFd3 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_2 | 3010 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_2.Q | XLXN_2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd1 | 3002 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd1.Q | XLXI_1/state_FSM_FFd1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd4 | 3004 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd4.Q | XLXI_1/state_FSM_FFd4 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<4> | 3005 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<4>.Q | XLXN_1<4> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<0> | 3006 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<0>.Q | XLXN_1<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<1> | 3007 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<1>.Q | XLXN_1<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<6> | 3008 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<6>.Q | XLXN_1<6> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<7> | 3009 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<7>.Q | XLXN_1<7> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<2> | 3011 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<2>.Q | XLXN_1<2> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<3> | 3012 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<3>.Q | XLXN_1<3> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<5> | 3013 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<5>.Q | XLXN_1<5> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd2 | 3003 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd2.Q | XLXI_1/state_FSM_FFd2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd2.EXP | 3147 | ? | 47 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd2.EXP | XLXI_1/state_FSM_FFd2 | 4 | 0 | MC_EXPORT
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | XLXI_1/state_FSM_FFd3.D1 | 3049 | ? | 47 | 4096 | XLXI_1/state_FSM_FFd3 | NULL | NULL | XLXI_1/state_FSM_FFd3.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | XLXI_1/state_FSM_FFd3.D2 | 3050 | ? | 47 | 4096 | XLXI_1/state_FSM_FFd3 | NULL | NULL | XLXI_1/state_FSM_FFd3.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | XLXI_1/state_FSM_FFd2.EXP
+SPPTERM | 3 | IV_FALSE | Reset_IBUF | IV_TRUE | XLXI_1/state_FSM_FFd3 | IV_FALSE | XLXN_2
+SPPTERM | 12 | IV_FALSE | Reset_IBUF | IV_TRUE | XLXI_1/state_FSM_FFd3 | IV_TRUE | XLXI_1/state_FSM_FFd1 | IV_FALSE | XLXI_1/state_FSM_FFd4 | IV_TRUE | XLXN_1<4> | IV_FALSE | XLXN_1<0> | IV_FALSE | XLXN_1<1> | IV_TRUE | XLXN_1<6> | IV_TRUE | XLXN_1<7> | IV_FALSE | XLXN_1<2> | IV_FALSE | XLXN_1<3> | IV_TRUE | XLXN_1<5>
+SPPTERM | 12 | IV_FALSE | Reset_IBUF | IV_TRUE | XLXI_1/state_FSM_FFd3 | IV_TRUE | XLXI_1/state_FSM_FFd2 | IV_FALSE | XLXI_1/state_FSM_FFd4 | IV_FALSE | XLXN_1<4> | IV_TRUE | XLXN_1<0> | IV_FALSE | XLXN_1<1> | IV_FALSE | XLXN_1<6> | IV_FALSE | XLXN_1<7> | IV_FALSE | XLXN_1<2> | IV_FALSE | XLXN_1<3> | IV_TRUE | XLXN_1<5>
+SPPTERM | 13 | IV_FALSE | Reset_IBUF | IV_TRUE | XLXI_1/state_FSM_FFd3 | IV_FALSE | XLXI_1/state_FSM_FFd1 | IV_FALSE | XLXI_1/state_FSM_FFd2 | IV_FALSE | XLXI_1/state_FSM_FFd4 | IV_TRUE | XLXN_1<4> | IV_FALSE | XLXN_1<0> | IV_FALSE | XLXN_1<1> | IV_FALSE | XLXN_1<6> | IV_FALSE | XLXN_1<7> | IV_TRUE | XLXN_1<2> | IV_TRUE | XLXN_1<3> | IV_FALSE | XLXN_1<5>
+SPPTERM | 13 | IV_FALSE | Reset_IBUF | IV_FALSE | XLXI_1/state_FSM_FFd3 | IV_TRUE | XLXI_1/state_FSM_FFd1 | IV_TRUE | XLXI_1/state_FSM_FFd4 | IV_FALSE | XLXN_1<4> | IV_TRUE | XLXN_1<0> | IV_TRUE | XLXN_1<1> | IV_FALSE | XLXN_1<6> | IV_FALSE | XLXN_1<7> | IV_TRUE | XLXN_2 | IV_FALSE | XLXN_1<2> | IV_FALSE | XLXN_1<3> | IV_TRUE | XLXN_1<5>
+
+SRFF_INSTANCE | XLXI_1/state_FSM_FFd3.REG | XLXI_1/state_FSM_FFd3 | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | XLXI_1/state_FSM_FFd3.D | 3048 | ? | 47 | 0 | XLXI_1/state_FSM_FFd3 | NULL | NULL | XLXI_1/state_FSM_FFd3.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | CLK_IBUF/FCLK | 2999 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | CLK_IBUF | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | XLXI_1/state_FSM_FFd3.Q | 3051 | ? | 51 | 0 | XLXI_1/state_FSM_FFd3 | NULL | NULL | XLXI_1/state_FSM_FFd3.REG | 0 | 8 | SRFF_Q
+TNAME | PERIOD_CLK
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped | XLXI_1/state_FSM_FFd1 | zamek_schemat_COPY_0_COPY_0 | 2155873280 | 15 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Reset_IBUF | 3000 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | Reset_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd1 | 3002 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd1.Q | XLXI_1/state_FSM_FFd1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_2 | 3010 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_2.Q | XLXN_2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd4 | 3004 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd4.Q | XLXI_1/state_FSM_FFd4 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<4> | 3005 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<4>.Q | XLXN_1<4> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<0> | 3006 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<0>.Q | XLXN_1<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<1> | 3007 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<1>.Q | XLXN_1<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<6> | 3008 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<6>.Q | XLXN_1<6> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<7> | 3009 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<7>.Q | XLXN_1<7> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<2> | 3011 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<2>.Q | XLXN_1<2> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<3> | 3012 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<3>.Q | XLXN_1<3> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<5> | 3013 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<5>.Q | XLXN_1<5> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd3 | 3001 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd3.Q | XLXI_1/state_FSM_FFd3 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd2 | 3003 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd2.Q | XLXI_1/state_FSM_FFd2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | CLK_IBUF/FCLK | 2999 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | CLK_IBUF | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | XLXI_1/state_FSM_FFd1 | 3002 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd1.Q | XLXI_1/state_FSM_FFd1 | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | XLXI_1/state_FSM_FFd1.SI | XLXI_1/state_FSM_FFd1 | 0 | 14 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Reset_IBUF | 3000 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | Reset_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd1 | 3002 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd1.Q | XLXI_1/state_FSM_FFd1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_2 | 3010 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_2.Q | XLXN_2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd4 | 3004 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd4.Q | XLXI_1/state_FSM_FFd4 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<4> | 3005 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<4>.Q | XLXN_1<4> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<0> | 3006 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<0>.Q | XLXN_1<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<1> | 3007 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<1>.Q | XLXN_1<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<6> | 3008 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<6>.Q | XLXN_1<6> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<7> | 3009 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<7>.Q | XLXN_1<7> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<2> | 3011 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<2>.Q | XLXN_1<2> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<3> | 3012 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<3>.Q | XLXN_1<3> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<5> | 3013 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<5>.Q | XLXN_1<5> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd3 | 3001 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd3.Q | XLXI_1/state_FSM_FFd3 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd2 | 3003 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd2.Q | XLXI_1/state_FSM_FFd2 | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | XLXI_1/state_FSM_FFd1.D1 | 3053 | ? | 49 | 4096 | XLXI_1/state_FSM_FFd1 | NULL | NULL | XLXI_1/state_FSM_FFd1.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | XLXI_1/state_FSM_FFd1.D2 | 3054 | ? | 49 | 4096 | XLXI_1/state_FSM_FFd1 | NULL | NULL | XLXI_1/state_FSM_FFd1.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_FALSE | Reset_IBUF | IV_TRUE | XLXI_1/state_FSM_FFd1 | IV_FALSE | XLXN_2
+SPPTERM | 11 | IV_FALSE | Reset_IBUF | IV_TRUE | XLXI_1/state_FSM_FFd1 | IV_TRUE | XLXI_1/state_FSM_FFd4 | IV_FALSE | XLXN_1<4> | IV_TRUE | XLXN_1<0> | IV_TRUE | XLXN_1<1> | IV_FALSE | XLXN_1<6> | IV_FALSE | XLXN_1<7> | IV_FALSE | XLXN_1<2> | IV_FALSE | XLXN_1<3> | IV_TRUE | XLXN_1<5>
+SPPTERM | 12 | IV_FALSE | Reset_IBUF | IV_TRUE | XLXI_1/state_FSM_FFd3 | IV_TRUE | XLXI_1/state_FSM_FFd1 | IV_FALSE | XLXI_1/state_FSM_FFd4 | IV_TRUE | XLXN_1<4> | IV_FALSE | XLXN_1<0> | IV_FALSE | XLXN_1<1> | IV_TRUE | XLXN_1<6> | IV_TRUE | XLXN_1<7> | IV_FALSE | XLXN_1<2> | IV_FALSE | XLXN_1<3> | IV_TRUE | XLXN_1<5>
+SPPTERM | 13 | IV_FALSE | Reset_IBUF | IV_TRUE | XLXI_1/state_FSM_FFd3 | IV_TRUE | XLXI_1/state_FSM_FFd2 | IV_TRUE | XLXI_1/state_FSM_FFd4 | IV_TRUE | XLXN_1<4> | IV_FALSE | XLXN_1<0> | IV_FALSE | XLXN_1<1> | IV_TRUE | XLXN_1<6> | IV_TRUE | XLXN_1<7> | IV_TRUE | XLXN_2 | IV_FALSE | XLXN_1<2> | IV_FALSE | XLXN_1<3> | IV_TRUE | XLXN_1<5>
+SPPTERM | 13 | IV_FALSE | Reset_IBUF | IV_FALSE | XLXI_1/state_FSM_FFd3 | IV_TRUE | XLXI_1/state_FSM_FFd1 | IV_FALSE | XLXI_1/state_FSM_FFd2 | IV_FALSE | XLXI_1/state_FSM_FFd4 | IV_FALSE | XLXN_1<4> | IV_TRUE | XLXN_1<0> | IV_FALSE | XLXN_1<1> | IV_FALSE | XLXN_1<6> | IV_FALSE | XLXN_1<7> | IV_FALSE | XLXN_1<2> | IV_FALSE | XLXN_1<3> | IV_TRUE | XLXN_1<5>
+
+SRFF_INSTANCE | XLXI_1/state_FSM_FFd1.REG | XLXI_1/state_FSM_FFd1 | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | XLXI_1/state_FSM_FFd1.D | 3052 | ? | 49 | 0 | XLXI_1/state_FSM_FFd1 | NULL | NULL | XLXI_1/state_FSM_FFd1.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | CLK_IBUF/FCLK | 2999 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | CLK_IBUF | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | XLXI_1/state_FSM_FFd1.Q | 3055 | ? | 51 | 0 | XLXI_1/state_FSM_FFd1 | NULL | NULL | XLXI_1/state_FSM_FFd1.REG | 0 | 8 | SRFF_Q
+TNAME | PERIOD_CLK
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped | XLXI_1/state_FSM_FFd2 | zamek_schemat_COPY_0_COPY_0 | 2155873280 | 16 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Reset_IBUF | 3000 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | Reset_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd2 | 3003 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd2.Q | XLXI_1/state_FSM_FFd2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_2 | 3010 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_2.Q | XLXN_2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd3 | 3001 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd3.Q | XLXI_1/state_FSM_FFd3 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd4 | 3004 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd4.Q | XLXI_1/state_FSM_FFd4 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<4> | 3005 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<4>.Q | XLXN_1<4> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<0> | 3006 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<0>.Q | XLXN_1<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<1> | 3007 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<1>.Q | XLXN_1<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<6> | 3008 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<6>.Q | XLXN_1<6> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<7> | 3009 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<7>.Q | XLXN_1<7> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<2> | 3011 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<2>.Q | XLXN_1<2> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<3> | 3012 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<3>.Q | XLXN_1<3> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<5> | 3013 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<5>.Q | XLXN_1<5> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd1 | 3002 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd1.Q | XLXI_1/state_FSM_FFd1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | CLK_IBUF/FCLK | 2999 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | CLK_IBUF | 3 | 5 | II_FCLK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | EXP11_.EXP | 3146 | ? | 50 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | EXP11_.EXP | EXP11_ | 4 | 0 | MC_EXPORT
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | XLXI_1/state_FSM_FFd2 | 3003 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd2.Q | XLXI_1/state_FSM_FFd2 | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 4 | 0 | MC_EXPORT
+NODE | XLXI_1/state_FSM_FFd2.EXP | 3147 | ? | 47 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd2.EXP | XLXI_1/state_FSM_FFd2 | 4 | 0 | MC_EXPORT
+
+SIGNAL_INSTANCE | XLXI_1/state_FSM_FFd2.SI | XLXI_1/state_FSM_FFd2 | 0 | 15 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Reset_IBUF | 3000 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | Reset_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd2 | 3003 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd2.Q | XLXI_1/state_FSM_FFd2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_2 | 3010 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_2.Q | XLXN_2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd3 | 3001 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd3.Q | XLXI_1/state_FSM_FFd3 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd4 | 3004 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd4.Q | XLXI_1/state_FSM_FFd4 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<4> | 3005 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<4>.Q | XLXN_1<4> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<0> | 3006 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<0>.Q | XLXN_1<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<1> | 3007 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<1>.Q | XLXN_1<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<6> | 3008 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<6>.Q | XLXN_1<6> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<7> | 3009 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<7>.Q | XLXN_1<7> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<2> | 3011 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<2>.Q | XLXN_1<2> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<3> | 3012 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<3>.Q | XLXN_1<3> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<5> | 3013 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<5>.Q | XLXN_1<5> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd1 | 3002 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd1.Q | XLXI_1/state_FSM_FFd1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | EXP11_.EXP | 3146 | ? | 50 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | EXP11_.EXP | EXP11_ | 4 | 0 | MC_EXPORT
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | XLXI_1/state_FSM_FFd2.D1 | 3057 | ? | 50 | 4096 | XLXI_1/state_FSM_FFd2 | NULL | NULL | XLXI_1/state_FSM_FFd2.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | XLXI_1/state_FSM_FFd2.D2 | 3058 | ? | 50 | 4096 | XLXI_1/state_FSM_FFd2 | NULL | NULL | XLXI_1/state_FSM_FFd2.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | EXP11_.EXP
+SPPTERM | 3 | IV_FALSE | Reset_IBUF | IV_TRUE | XLXI_1/state_FSM_FFd2 | IV_FALSE | XLXN_2
+SPPTERM | 12 | IV_FALSE | Reset_IBUF | IV_TRUE | XLXI_1/state_FSM_FFd3 | IV_TRUE | XLXI_1/state_FSM_FFd2 | IV_FALSE | XLXI_1/state_FSM_FFd4 | IV_FALSE | XLXN_1<4> | IV_TRUE | XLXN_1<0> | IV_FALSE | XLXN_1<1> | IV_FALSE | XLXN_1<6> | IV_FALSE | XLXN_1<7> | IV_FALSE | XLXN_1<2> | IV_FALSE | XLXN_1<3> | IV_TRUE | XLXN_1<5>
+SPPTERM | 12 | IV_FALSE | Reset_IBUF | IV_FALSE | XLXI_1/state_FSM_FFd3 | IV_TRUE | XLXI_1/state_FSM_FFd2 | IV_TRUE | XLXI_1/state_FSM_FFd4 | IV_TRUE | XLXN_1<4> | IV_FALSE | XLXN_1<0> | IV_TRUE | XLXN_1<1> | IV_FALSE | XLXN_1<6> | IV_FALSE | XLXN_1<7> | IV_FALSE | XLXN_1<2> | IV_FALSE | XLXN_1<3> | IV_TRUE | XLXN_1<5>
+OUTPUT_NODE_TYPE | 7 | 9 | MC_SI_EXPORT
+SIGNAL | NODE | XLXI_1/state_FSM_FFd2.EXP | 3143 | ? | 47 | 0 | XLXI_1/state_FSM_FFd2 | NULL | NULL | XLXI_1/state_FSM_FFd2.SI | 7 | 9 | MC_SI_EXPORT
+SPPTERM | 13 | IV_FALSE | Reset_IBUF | IV_FALSE | XLXI_1/state_FSM_FFd3 | IV_TRUE | XLXI_1/state_FSM_FFd2 | IV_TRUE | XLXI_1/state_FSM_FFd4 | IV_TRUE | XLXN_1<4> | IV_FALSE | XLXN_1<0> | IV_TRUE | XLXN_1<1> | IV_FALSE | XLXN_1<6> | IV_FALSE | XLXN_1<7> | IV_TRUE | XLXN_2 | IV_FALSE | XLXN_1<2> | IV_FALSE | XLXN_1<3> | IV_TRUE | XLXN_1<5>
+SPPTERM | 14 | IV_FALSE | Reset_IBUF | IV_FALSE | XLXI_1/state_FSM_FFd3 | IV_FALSE | XLXI_1/state_FSM_FFd1 | IV_FALSE | XLXI_1/state_FSM_FFd2 | IV_TRUE | XLXI_1/state_FSM_FFd4 | IV_TRUE | XLXN_1<4> | IV_FALSE | XLXN_1<0> | IV_FALSE | XLXN_1<1> | IV_TRUE | XLXN_1<6> | IV_TRUE | XLXN_1<7> | IV_TRUE | XLXN_2 | IV_FALSE | XLXN_1<2> | IV_FALSE | XLXN_1<3> | IV_TRUE | XLXN_1<5>
+
+SRFF_INSTANCE | XLXI_1/state_FSM_FFd2.REG | XLXI_1/state_FSM_FFd2 | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | XLXI_1/state_FSM_FFd2.D | 3056 | ? | 50 | 0 | XLXI_1/state_FSM_FFd2 | NULL | NULL | XLXI_1/state_FSM_FFd2.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | CLK_IBUF/FCLK | 2999 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | CLK_IBUF | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | XLXI_1/state_FSM_FFd2.Q | 3059 | ? | 51 | 0 | XLXI_1/state_FSM_FFd2 | NULL | NULL | XLXI_1/state_FSM_FFd2.REG | 0 | 8 | SRFF_Q
+TNAME | PERIOD_CLK
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped | XLXI_1/state_FSM_FFd4 | zamek_schemat_COPY_0_COPY_0 | 2155873280 | 16 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Reset_IBUF | 3000 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | Reset_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd4 | 3004 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd4.Q | XLXI_1/state_FSM_FFd4 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_2 | 3010 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_2.Q | XLXN_2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd3 | 3001 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd3.Q | XLXI_1/state_FSM_FFd3 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd1 | 3002 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd1.Q | XLXI_1/state_FSM_FFd1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<4> | 3005 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<4>.Q | XLXN_1<4> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<0> | 3006 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<0>.Q | XLXN_1<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<1> | 3007 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<1>.Q | XLXN_1<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<6> | 3008 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<6>.Q | XLXN_1<6> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<7> | 3009 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<7>.Q | XLXN_1<7> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<2> | 3011 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<2>.Q | XLXN_1<2> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<3> | 3012 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<3>.Q | XLXN_1<3> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<5> | 3013 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<5>.Q | XLXN_1<5> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd2 | 3003 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd2.Q | XLXI_1/state_FSM_FFd2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | CLK_IBUF/FCLK | 2999 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | CLK_IBUF | 3 | 5 | II_FCLK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | y_OBUF.EXP | 3144 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | y_OBUF.EXP | y_OBUF | 4 | 0 | MC_EXPORT
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | XLXI_1/state_FSM_FFd4 | 3004 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd4.Q | XLXI_1/state_FSM_FFd4 | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | XLXI_1/state_FSM_FFd4.SI | XLXI_1/state_FSM_FFd4 | 0 | 15 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Reset_IBUF | 3000 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | Reset_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd4 | 3004 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd4.Q | XLXI_1/state_FSM_FFd4 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_2 | 3010 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_2.Q | XLXN_2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd3 | 3001 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd3.Q | XLXI_1/state_FSM_FFd3 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd1 | 3002 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd1.Q | XLXI_1/state_FSM_FFd1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<4> | 3005 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<4>.Q | XLXN_1<4> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<0> | 3006 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<0>.Q | XLXN_1<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<1> | 3007 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<1>.Q | XLXN_1<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<6> | 3008 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<6>.Q | XLXN_1<6> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<7> | 3009 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<7>.Q | XLXN_1<7> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<2> | 3011 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<2>.Q | XLXN_1<2> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<3> | 3012 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<3>.Q | XLXN_1<3> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<5> | 3013 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<5>.Q | XLXN_1<5> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd2 | 3003 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd2.Q | XLXI_1/state_FSM_FFd2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | y_OBUF.EXP | 3144 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | y_OBUF.EXP | y_OBUF | 4 | 0 | MC_EXPORT
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | XLXI_1/state_FSM_FFd4.D1 | 3061 | ? | 51 | 4096 | XLXI_1/state_FSM_FFd4 | NULL | NULL | XLXI_1/state_FSM_FFd4.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | XLXI_1/state_FSM_FFd4.D2 | 3062 | ? | 51 | 4096 | XLXI_1/state_FSM_FFd4 | NULL | NULL | XLXI_1/state_FSM_FFd4.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | y_OBUF.EXP
+SPPTERM | 3 | IV_FALSE | Reset_IBUF | IV_TRUE | XLXI_1/state_FSM_FFd4 | IV_FALSE | XLXN_2
+SPPTERM | 12 | IV_FALSE | Reset_IBUF | IV_FALSE | XLXI_1/state_FSM_FFd3 | IV_TRUE | XLXI_1/state_FSM_FFd1 | IV_TRUE | XLXI_1/state_FSM_FFd4 | IV_TRUE | XLXN_1<4> | IV_FALSE | XLXN_1<0> | IV_FALSE | XLXN_1<1> | IV_FALSE | XLXN_1<6> | IV_FALSE | XLXN_1<7> | IV_TRUE | XLXN_1<2> | IV_TRUE | XLXN_1<3> | IV_FALSE | XLXN_1<5>
+SPPTERM | 12 | IV_FALSE | Reset_IBUF | IV_TRUE | XLXI_1/state_FSM_FFd1 | IV_TRUE | XLXI_1/state_FSM_FFd2 | IV_TRUE | XLXN_1<4> | IV_FALSE | XLXN_1<0> | IV_FALSE | XLXN_1<1> | IV_FALSE | XLXN_1<6> | IV_FALSE | XLXN_1<7> | IV_TRUE | XLXN_2 | IV_TRUE | XLXN_1<2> | IV_TRUE | XLXN_1<3> | IV_FALSE | XLXN_1<5>
+SPPTERM | 13 | IV_FALSE | Reset_IBUF | IV_TRUE | XLXI_1/state_FSM_FFd3 | IV_FALSE | XLXI_1/state_FSM_FFd1 | IV_FALSE | XLXI_1/state_FSM_FFd2 | IV_TRUE | XLXN_1<4> | IV_FALSE | XLXN_1<0> | IV_FALSE | XLXN_1<1> | IV_FALSE | XLXN_1<6> | IV_FALSE | XLXN_1<7> | IV_TRUE | XLXN_2 | IV_TRUE | XLXN_1<2> | IV_TRUE | XLXN_1<3> | IV_FALSE | XLXN_1<5>
+SPPTERM | 13 | IV_FALSE | Reset_IBUF | IV_TRUE | XLXI_1/state_FSM_FFd3 | IV_TRUE | XLXI_1/state_FSM_FFd2 | IV_FALSE | XLXI_1/state_FSM_FFd4 | IV_TRUE | XLXN_1<4> | IV_FALSE | XLXN_1<0> | IV_FALSE | XLXN_1<1> | IV_FALSE | XLXN_1<6> | IV_FALSE | XLXN_1<7> | IV_TRUE | XLXN_2 | IV_TRUE | XLXN_1<2> | IV_TRUE | XLXN_1<3> | IV_FALSE | XLXN_1<5>
+
+SRFF_INSTANCE | XLXI_1/state_FSM_FFd4.REG | XLXI_1/state_FSM_FFd4 | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | XLXI_1/state_FSM_FFd4.D | 3060 | ? | 51 | 0 | XLXI_1/state_FSM_FFd4 | NULL | NULL | XLXI_1/state_FSM_FFd4.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | CLK_IBUF/FCLK | 2999 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | CLK_IBUF | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | XLXI_1/state_FSM_FFd4.Q | 3063 | ? | 51 | 0 | XLXI_1/state_FSM_FFd4 | NULL | NULL | XLXI_1/state_FSM_FFd4.REG | 0 | 8 | SRFF_Q
+TNAME | PERIOD_CLK
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped | XLXN_1<4> | zamek_schemat_COPY_0_COPY_0 | 2155873280 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<5> | 3013 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<5>.Q | XLXN_1<5> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | PS2_Clk_IBUF | 2994 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | PS2_Clk_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | XLXN_1<4> | 3005 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<4>.Q | XLXN_1<4> | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | XLXN_1<4>.SI | XLXN_1<4> | 0 | 2 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<5> | 3013 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<5>.Q | XLXN_1<5> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | PS2_Clk_IBUF | 2994 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | PS2_Clk_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | XLXN_1<4>.D1 | 3065 | ? | 0 | 4096 | XLXN_1<4> | NULL | NULL | XLXN_1<4>.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | XLXN_1<4>.D2 | 3066 | ? | 0 | 4096 | XLXN_1<4> | NULL | NULL | XLXN_1<4>.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | XLXN_1<5>
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | XLXN_1<4>.CLKF | 3067 | ? | 51 | 4096 | XLXN_1<4> | NULL | NULL | XLXN_1<4>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_FALSE | PS2_Clk_IBUF
+
+SRFF_INSTANCE | XLXN_1<4>.REG | XLXN_1<4> | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | XLXN_1<4>.D | 3064 | ? | 0 | 0 | XLXN_1<4> | NULL | NULL | XLXN_1<4>.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | XLXN_1<4>.CLKF | 3067 | ? | 51 | 4096 | XLXN_1<4> | NULL | NULL | XLXN_1<4>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_FALSE | PS2_Clk_IBUF
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | XLXN_1<4>.Q | 3068 | ? | 51 | 0 | XLXN_1<4> | NULL | NULL | XLXN_1<4>.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped | XLXN_1<0> | zamek_schemat_COPY_0_COPY_0 | 2155873280 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<1> | 3007 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<1>.Q | XLXN_1<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | PS2_Clk_IBUF | 2994 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | PS2_Clk_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | XLXN_1<0> | 3006 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<0>.Q | XLXN_1<0> | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | XLXN_1<0>.SI | XLXN_1<0> | 0 | 2 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<1> | 3007 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<1>.Q | XLXN_1<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | PS2_Clk_IBUF | 2994 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | PS2_Clk_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | XLXN_1<0>.D1 | 3070 | ? | 0 | 4096 | XLXN_1<0> | NULL | NULL | XLXN_1<0>.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | XLXN_1<0>.D2 | 3071 | ? | 0 | 4096 | XLXN_1<0> | NULL | NULL | XLXN_1<0>.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | XLXN_1<1>
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | XLXN_1<0>.CLKF | 3072 | ? | 51 | 4096 | XLXN_1<0> | NULL | NULL | XLXN_1<0>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_FALSE | PS2_Clk_IBUF
+
+SRFF_INSTANCE | XLXN_1<0>.REG | XLXN_1<0> | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | XLXN_1<0>.D | 3069 | ? | 0 | 0 | XLXN_1<0> | NULL | NULL | XLXN_1<0>.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | XLXN_1<0>.CLKF | 3072 | ? | 51 | 4096 | XLXN_1<0> | NULL | NULL | XLXN_1<0>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_FALSE | PS2_Clk_IBUF
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | XLXN_1<0>.Q | 3073 | ? | 51 | 0 | XLXN_1<0> | NULL | NULL | XLXN_1<0>.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped | XLXN_1<1> | zamek_schemat_COPY_0_COPY_0 | 2155873280 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<2> | 3011 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<2>.Q | XLXN_1<2> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | PS2_Clk_IBUF | 2994 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | PS2_Clk_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | XLXN_1<1> | 3007 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<1>.Q | XLXN_1<1> | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | XLXN_1<1>.SI | XLXN_1<1> | 0 | 2 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<2> | 3011 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<2>.Q | XLXN_1<2> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | PS2_Clk_IBUF | 2994 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | PS2_Clk_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | XLXN_1<1>.D1 | 3075 | ? | 0 | 4096 | XLXN_1<1> | NULL | NULL | XLXN_1<1>.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | XLXN_1<1>.D2 | 3076 | ? | 0 | 4096 | XLXN_1<1> | NULL | NULL | XLXN_1<1>.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | XLXN_1<2>
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | XLXN_1<1>.CLKF | 3077 | ? | 51 | 4096 | XLXN_1<1> | NULL | NULL | XLXN_1<1>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_FALSE | PS2_Clk_IBUF
+
+SRFF_INSTANCE | XLXN_1<1>.REG | XLXN_1<1> | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | XLXN_1<1>.D | 3074 | ? | 0 | 0 | XLXN_1<1> | NULL | NULL | XLXN_1<1>.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | XLXN_1<1>.CLKF | 3077 | ? | 51 | 4096 | XLXN_1<1> | NULL | NULL | XLXN_1<1>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_FALSE | PS2_Clk_IBUF
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | XLXN_1<1>.Q | 3078 | ? | 51 | 0 | XLXN_1<1> | NULL | NULL | XLXN_1<1>.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped | XLXN_1<6> | zamek_schemat_COPY_0_COPY_0 | 2155873280 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<7> | 3009 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<7>.Q | XLXN_1<7> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | PS2_Clk_IBUF | 2994 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | PS2_Clk_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | XLXN_1<6> | 3008 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<6>.Q | XLXN_1<6> | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | XLXN_1<6>.SI | XLXN_1<6> | 0 | 2 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<7> | 3009 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<7>.Q | XLXN_1<7> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | PS2_Clk_IBUF | 2994 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | PS2_Clk_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | XLXN_1<6>.D1 | 3080 | ? | 0 | 4096 | XLXN_1<6> | NULL | NULL | XLXN_1<6>.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | XLXN_1<6>.D2 | 3081 | ? | 0 | 4096 | XLXN_1<6> | NULL | NULL | XLXN_1<6>.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | XLXN_1<7>
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | XLXN_1<6>.CLKF | 3082 | ? | 51 | 4096 | XLXN_1<6> | NULL | NULL | XLXN_1<6>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_FALSE | PS2_Clk_IBUF
+
+SRFF_INSTANCE | XLXN_1<6>.REG | XLXN_1<6> | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | XLXN_1<6>.D | 3079 | ? | 0 | 0 | XLXN_1<6> | NULL | NULL | XLXN_1<6>.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | XLXN_1<6>.CLKF | 3082 | ? | 51 | 4096 | XLXN_1<6> | NULL | NULL | XLXN_1<6>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_FALSE | PS2_Clk_IBUF
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | XLXN_1<6>.Q | 3083 | ? | 51 | 0 | XLXN_1<6> | NULL | NULL | XLXN_1<6>.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped | XLXN_1<7> | zamek_schemat_COPY_0_COPY_0 | 2155873280 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_2/reg10b<8> | 3014 | ? | 0 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/reg10b<8>.Q | XLXI_2/reg10b<8> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | PS2_Clk_IBUF | 2994 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | PS2_Clk_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | XLXN_1<7> | 3009 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<7>.Q | XLXN_1<7> | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | XLXN_1<7>.SI | XLXN_1<7> | 0 | 2 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_2/reg10b<8> | 3014 | ? | 0 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/reg10b<8>.Q | XLXI_2/reg10b<8> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | PS2_Clk_IBUF | 2994 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | PS2_Clk_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | XLXN_1<7>.D1 | 3085 | ? | 0 | 4096 | XLXN_1<7> | NULL | NULL | XLXN_1<7>.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | XLXN_1<7>.D2 | 3086 | ? | 0 | 4096 | XLXN_1<7> | NULL | NULL | XLXN_1<7>.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | XLXI_2/reg10b<8>
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | XLXN_1<7>.CLKF | 3087 | ? | 51 | 4096 | XLXN_1<7> | NULL | NULL | XLXN_1<7>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_FALSE | PS2_Clk_IBUF
+
+SRFF_INSTANCE | XLXN_1<7>.REG | XLXN_1<7> | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | XLXN_1<7>.D | 3084 | ? | 0 | 0 | XLXN_1<7> | NULL | NULL | XLXN_1<7>.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | XLXN_1<7>.CLKF | 3087 | ? | 51 | 4096 | XLXN_1<7> | NULL | NULL | XLXN_1<7>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_FALSE | PS2_Clk_IBUF
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | XLXN_1<7>.Q | 3088 | ? | 51 | 0 | XLXN_1<7> | NULL | NULL | XLXN_1<7>.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped | XLXN_2 | zamek_schemat_COPY_0_COPY_0 | 2155873280 | 5 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_2/Cnt<0> | 2995 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/Cnt<0>.Q | XLXI_2/Cnt<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_2/Cnt<1> | 2996 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/Cnt<1>.Q | XLXI_2/Cnt<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_2/Cnt<2> | 2997 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/Cnt<2>.Q | XLXI_2/Cnt<2> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_2/Cnt<3> | 2998 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/Cnt<3>.Q | XLXI_2/Cnt<3> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | CLK_IBUF/FCLK | 2999 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | CLK_IBUF | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | XLXN_2 | 3010 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_2.Q | XLXN_2 | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | XLXN_2.SI | XLXN_2 | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_2/Cnt<0> | 2995 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/Cnt<0>.Q | XLXI_2/Cnt<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_2/Cnt<1> | 2996 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/Cnt<1>.Q | XLXI_2/Cnt<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_2/Cnt<2> | 2997 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/Cnt<2>.Q | XLXI_2/Cnt<2> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_2/Cnt<3> | 2998 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/Cnt<3>.Q | XLXI_2/Cnt<3> | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | XLXN_2.D1 | 3090 | ? | 52 | 4096 | XLXN_2 | NULL | NULL | XLXN_2.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | XLXN_2.D2 | 3091 | ? | 52 | 4096 | XLXN_2 | NULL | NULL | XLXN_2.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 4 | IV_TRUE | XLXI_2/Cnt<0> | IV_TRUE | XLXI_2/Cnt<1> | IV_FALSE | XLXI_2/Cnt<2> | IV_TRUE | XLXI_2/Cnt<3>
+
+SRFF_INSTANCE | XLXN_2.REG | XLXN_2 | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | XLXN_2.D | 3089 | ? | 52 | 0 | XLXN_2 | NULL | NULL | XLXN_2.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | CLK_IBUF/FCLK | 2999 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | CLK_IBUF | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | XLXN_2.Q | 3092 | ? | 51 | 0 | XLXN_2 | NULL | NULL | XLXN_2.REG | 0 | 8 | SRFF_Q
+TNAME | PERIOD_CLK
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped | XLXN_1<2> | zamek_schemat_COPY_0_COPY_0 | 2155873280 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<3> | 3012 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<3>.Q | XLXN_1<3> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | PS2_Clk_IBUF | 2994 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | PS2_Clk_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | XLXN_1<2> | 3011 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<2>.Q | XLXN_1<2> | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | XLXN_1<2>.SI | XLXN_1<2> | 0 | 2 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<3> | 3012 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<3>.Q | XLXN_1<3> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | PS2_Clk_IBUF | 2994 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | PS2_Clk_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | XLXN_1<2>.D1 | 3094 | ? | 0 | 4096 | XLXN_1<2> | NULL | NULL | XLXN_1<2>.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | XLXN_1<2>.D2 | 3095 | ? | 0 | 4096 | XLXN_1<2> | NULL | NULL | XLXN_1<2>.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | XLXN_1<3>
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | XLXN_1<2>.CLKF | 3096 | ? | 51 | 4096 | XLXN_1<2> | NULL | NULL | XLXN_1<2>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_FALSE | PS2_Clk_IBUF
+
+SRFF_INSTANCE | XLXN_1<2>.REG | XLXN_1<2> | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | XLXN_1<2>.D | 3093 | ? | 0 | 0 | XLXN_1<2> | NULL | NULL | XLXN_1<2>.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | XLXN_1<2>.CLKF | 3096 | ? | 51 | 4096 | XLXN_1<2> | NULL | NULL | XLXN_1<2>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_FALSE | PS2_Clk_IBUF
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | XLXN_1<2>.Q | 3097 | ? | 51 | 0 | XLXN_1<2> | NULL | NULL | XLXN_1<2>.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped | XLXN_1<3> | zamek_schemat_COPY_0_COPY_0 | 2155873280 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<4> | 3005 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<4>.Q | XLXN_1<4> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | PS2_Clk_IBUF | 2994 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | PS2_Clk_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | XLXN_1<3> | 3012 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<3>.Q | XLXN_1<3> | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | XLXN_1<3>.SI | XLXN_1<3> | 0 | 2 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<4> | 3005 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<4>.Q | XLXN_1<4> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | PS2_Clk_IBUF | 2994 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | PS2_Clk_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | XLXN_1<3>.D1 | 3099 | ? | 0 | 4096 | XLXN_1<3> | NULL | NULL | XLXN_1<3>.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | XLXN_1<3>.D2 | 3100 | ? | 0 | 4096 | XLXN_1<3> | NULL | NULL | XLXN_1<3>.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | XLXN_1<4>
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | XLXN_1<3>.CLKF | 3101 | ? | 51 | 4096 | XLXN_1<3> | NULL | NULL | XLXN_1<3>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_FALSE | PS2_Clk_IBUF
+
+SRFF_INSTANCE | XLXN_1<3>.REG | XLXN_1<3> | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | XLXN_1<3>.D | 3098 | ? | 0 | 0 | XLXN_1<3> | NULL | NULL | XLXN_1<3>.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | XLXN_1<3>.CLKF | 3101 | ? | 51 | 4096 | XLXN_1<3> | NULL | NULL | XLXN_1<3>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_FALSE | PS2_Clk_IBUF
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | XLXN_1<3>.Q | 3102 | ? | 51 | 0 | XLXN_1<3> | NULL | NULL | XLXN_1<3>.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped | XLXN_1<5> | zamek_schemat_COPY_0_COPY_0 | 2155873280 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<6> | 3008 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<6>.Q | XLXN_1<6> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | PS2_Clk_IBUF | 2994 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | PS2_Clk_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | XLXN_1<5> | 3013 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<5>.Q | XLXN_1<5> | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | XLXN_1<5>.SI | XLXN_1<5> | 0 | 2 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<6> | 3008 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<6>.Q | XLXN_1<6> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | PS2_Clk_IBUF | 2994 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | PS2_Clk_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | XLXN_1<5>.D1 | 3104 | ? | 0 | 4096 | XLXN_1<5> | NULL | NULL | XLXN_1<5>.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | XLXN_1<5>.D2 | 3105 | ? | 0 | 4096 | XLXN_1<5> | NULL | NULL | XLXN_1<5>.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | XLXN_1<6>
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | XLXN_1<5>.CLKF | 3106 | ? | 51 | 4096 | XLXN_1<5> | NULL | NULL | XLXN_1<5>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_FALSE | PS2_Clk_IBUF
+
+SRFF_INSTANCE | XLXN_1<5>.REG | XLXN_1<5> | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | XLXN_1<5>.D | 3103 | ? | 0 | 0 | XLXN_1<5> | NULL | NULL | XLXN_1<5>.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | XLXN_1<5>.CLKF | 3106 | ? | 51 | 4096 | XLXN_1<5> | NULL | NULL | XLXN_1<5>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_FALSE | PS2_Clk_IBUF
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | XLXN_1<5>.Q | 3107 | ? | 51 | 0 | XLXN_1<5> | NULL | NULL | XLXN_1<5>.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped | XLXI_2/reg10b<8> | zamek_schemat_COPY_0_COPY_0 | 2155873280 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_2/reg10b<9> | 3016 | ? | 0 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/reg10b<9>.Q | XLXI_2/reg10b<9> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | PS2_Clk_IBUF | 2994 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | PS2_Clk_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | XLXI_2/reg10b<8> | 3014 | ? | 0 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/reg10b<8>.Q | XLXI_2/reg10b<8> | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | XLXI_2/reg10b<8>.SI | XLXI_2/reg10b<8> | 0 | 2 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_2/reg10b<9> | 3016 | ? | 0 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/reg10b<9>.Q | XLXI_2/reg10b<9> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | PS2_Clk_IBUF | 2994 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | PS2_Clk_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | XLXI_2/reg10b<8>.D1 | 3109 | ? | 0 | 4096 | XLXI_2/reg10b<8> | NULL | NULL | XLXI_2/reg10b<8>.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | XLXI_2/reg10b<8>.D2 | 3110 | ? | 0 | 4096 | XLXI_2/reg10b<8> | NULL | NULL | XLXI_2/reg10b<8>.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | XLXI_2/reg10b<9>
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | XLXI_2/reg10b<8>.CLKF | 3111 | ? | 0 | 4096 | XLXI_2/reg10b<8> | NULL | NULL | XLXI_2/reg10b<8>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_FALSE | PS2_Clk_IBUF
+
+SRFF_INSTANCE | XLXI_2/reg10b<8>.REG | XLXI_2/reg10b<8> | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | XLXI_2/reg10b<8>.D | 3108 | ? | 0 | 0 | XLXI_2/reg10b<8> | NULL | NULL | XLXI_2/reg10b<8>.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | XLXI_2/reg10b<8>.CLKF | 3111 | ? | 0 | 4096 | XLXI_2/reg10b<8> | NULL | NULL | XLXI_2/reg10b<8>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_FALSE | PS2_Clk_IBUF
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | XLXI_2/reg10b<8>.Q | 3112 | ? | 0 | 0 | XLXI_2/reg10b<8> | NULL | NULL | XLXI_2/reg10b<8>.REG | 0 | 8 | SRFF_Q
+
+INPUT_INSTANCE | 0 | 0 | NULL | PS2_Data_IBUF | zamek_schemat_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | PS2_Data | 3023 | PI | 0 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | PS2_Data_IBUF | 3015 | ? | 0 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | PS2_Data_IBUF | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped | XLXI_2/reg10b<9> | zamek_schemat_COPY_0_COPY_0 | 2155873280 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | PS2_Data_IBUF | 3015 | ? | 0 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | PS2_Data_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | PS2_Clk_IBUF | 2994 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | PS2_Clk_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | XLXI_2/reg10b<9> | 3016 | ? | 0 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/reg10b<9>.Q | XLXI_2/reg10b<9> | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | XLXI_2/reg10b<9>.SI | XLXI_2/reg10b<9> | 0 | 2 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | PS2_Data_IBUF | 3015 | ? | 0 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | PS2_Data_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | PS2_Clk_IBUF | 2994 | ? | 52 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | PS2_Clk_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | XLXI_2/reg10b<9>.D1 | 3114 | ? | 0 | 4096 | XLXI_2/reg10b<9> | NULL | NULL | XLXI_2/reg10b<9>.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | XLXI_2/reg10b<9>.D2 | 3115 | ? | 0 | 4096 | XLXI_2/reg10b<9> | NULL | NULL | XLXI_2/reg10b<9>.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | PS2_Data_IBUF
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | XLXI_2/reg10b<9>.CLKF | 3116 | ? | 0 | 4096 | XLXI_2/reg10b<9> | NULL | NULL | XLXI_2/reg10b<9>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_FALSE | PS2_Clk_IBUF
+
+SRFF_INSTANCE | XLXI_2/reg10b<9>.REG | XLXI_2/reg10b<9> | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | XLXI_2/reg10b<9>.D | 3113 | ? | 0 | 0 | XLXI_2/reg10b<9> | NULL | NULL | XLXI_2/reg10b<9>.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | XLXI_2/reg10b<9>.CLKF | 3116 | ? | 0 | 4096 | XLXI_2/reg10b<9> | NULL | NULL | XLXI_2/reg10b<9>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_FALSE | PS2_Clk_IBUF
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | XLXI_2/reg10b<9>.Q | 3117 | ? | 0 | 0 | XLXI_2/reg10b<9> | NULL | NULL | XLXI_2/reg10b<9>.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | OptxMapped | y_OBUF | zamek_schemat_COPY_0_COPY_0 | 2155872256 | 15 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Reset_IBUF | 3000 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | Reset_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd3 | 3001 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd3.Q | XLXI_1/state_FSM_FFd3 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd1 | 3002 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd1.Q | XLXI_1/state_FSM_FFd1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd4 | 3004 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd4.Q | XLXI_1/state_FSM_FFd4 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<4> | 3005 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<4>.Q | XLXN_1<4> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<0> | 3006 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<0>.Q | XLXN_1<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<1> | 3007 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<1>.Q | XLXN_1<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<6> | 3008 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<6>.Q | XLXN_1<6> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<7> | 3009 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<7>.Q | XLXN_1<7> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_2 | 3010 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_2.Q | XLXN_2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<2> | 3011 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<2>.Q | XLXN_1<2> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<3> | 3012 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<3>.Q | XLXN_1<3> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<5> | 3013 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<5>.Q | XLXN_1<5> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd2 | 3003 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd2.Q | XLXI_1/state_FSM_FFd2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | EXP10_.EXP | 3145 | ? | 0 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | EXP10_.EXP | EXP10_ | 4 | 0 | MC_EXPORT
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | y_OBUF | 3017 | ? | 0 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | y_OBUF.Q | y_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 4 | 0 | MC_EXPORT
+NODE | y_OBUF.EXP | 3144 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | y_OBUF.EXP | y_OBUF | 4 | 0 | MC_EXPORT
+
+SIGNAL_INSTANCE | y_OBUF.SI | y_OBUF | 0 | 15 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Reset_IBUF | 3000 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | Reset_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd3 | 3001 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd3.Q | XLXI_1/state_FSM_FFd3 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd1 | 3002 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd1.Q | XLXI_1/state_FSM_FFd1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd4 | 3004 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd4.Q | XLXI_1/state_FSM_FFd4 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<4> | 3005 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<4>.Q | XLXN_1<4> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<0> | 3006 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<0>.Q | XLXN_1<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<1> | 3007 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<1>.Q | XLXN_1<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<6> | 3008 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<6>.Q | XLXN_1<6> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<7> | 3009 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<7>.Q | XLXN_1<7> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_2 | 3010 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_2.Q | XLXN_2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<2> | 3011 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<2>.Q | XLXN_1<2> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<3> | 3012 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<3>.Q | XLXN_1<3> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<5> | 3013 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<5>.Q | XLXN_1<5> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd2 | 3003 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd2.Q | XLXI_1/state_FSM_FFd2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | EXP10_.EXP | 3145 | ? | 0 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | EXP10_.EXP | EXP10_ | 4 | 0 | MC_EXPORT
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | y_OBUF.D1 | 3119 | ? | 0 | 4096 | y_OBUF | NULL | NULL | y_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | y_OBUF.D2 | 3120 | ? | 0 | 4096 | y_OBUF | NULL | NULL | y_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | EXP10_.EXP
+OUTPUT_NODE_TYPE | 7 | 9 | MC_SI_EXPORT
+SIGNAL | NODE | y_OBUF.EXP | 3140 | ? | 51 | 0 | y_OBUF | NULL | NULL | y_OBUF.SI | 7 | 9 | MC_SI_EXPORT
+SPPTERM | 13 | IV_FALSE | Reset_IBUF | IV_TRUE | XLXI_1/state_FSM_FFd3 | IV_TRUE | XLXI_1/state_FSM_FFd1 | IV_FALSE | XLXI_1/state_FSM_FFd4 | IV_TRUE | XLXN_1<4> | IV_FALSE | XLXN_1<0> | IV_FALSE | XLXN_1<1> | IV_TRUE | XLXN_1<6> | IV_TRUE | XLXN_1<7> | IV_TRUE | XLXN_2 | IV_FALSE | XLXN_1<2> | IV_FALSE | XLXN_1<3> | IV_TRUE | XLXN_1<5>
+SPPTERM | 13 | IV_FALSE | Reset_IBUF | IV_TRUE | XLXI_1/state_FSM_FFd3 | IV_TRUE | XLXI_1/state_FSM_FFd2 | IV_FALSE | XLXI_1/state_FSM_FFd4 | IV_FALSE | XLXN_1<4> | IV_TRUE | XLXN_1<0> | IV_FALSE | XLXN_1<1> | IV_FALSE | XLXN_1<6> | IV_FALSE | XLXN_1<7> | IV_TRUE | XLXN_2 | IV_FALSE | XLXN_1<2> | IV_FALSE | XLXN_1<3> | IV_TRUE | XLXN_1<5>
+SPPTERM | 13 | IV_FALSE | Reset_IBUF | IV_FALSE | XLXI_1/state_FSM_FFd1 | IV_FALSE | XLXI_1/state_FSM_FFd2 | IV_FALSE | XLXI_1/state_FSM_FFd4 | IV_TRUE | XLXN_1<4> | IV_FALSE | XLXN_1<0> | IV_FALSE | XLXN_1<1> | IV_FALSE | XLXN_1<6> | IV_FALSE | XLXN_1<7> | IV_TRUE | XLXN_2 | IV_TRUE | XLXN_1<2> | IV_TRUE | XLXN_1<3> | IV_FALSE | XLXN_1<5>
+SPPTERM | 14 | IV_FALSE | Reset_IBUF | IV_FALSE | XLXI_1/state_FSM_FFd3 | IV_TRUE | XLXI_1/state_FSM_FFd1 | IV_FALSE | XLXI_1/state_FSM_FFd2 | IV_FALSE | XLXI_1/state_FSM_FFd4 | IV_FALSE | XLXN_1<4> | IV_TRUE | XLXN_1<0> | IV_FALSE | XLXN_1<1> | IV_FALSE | XLXN_1<6> | IV_FALSE | XLXN_1<7> | IV_TRUE | XLXN_2 | IV_FALSE | XLXN_1<2> | IV_FALSE | XLXN_1<3> | IV_TRUE | XLXN_1<5>
+SPPTERM | 14 | IV_FALSE | Reset_IBUF | IV_FALSE | XLXI_1/state_FSM_FFd3 | IV_FALSE | XLXI_1/state_FSM_FFd1 | IV_TRUE | XLXI_1/state_FSM_FFd2 | IV_FALSE | XLXI_1/state_FSM_FFd4 | IV_TRUE | XLXN_1<4> | IV_FALSE | XLXN_1<0> | IV_FALSE | XLXN_1<1> | IV_TRUE | XLXN_1<6> | IV_TRUE | XLXN_1<7> | IV_TRUE | XLXN_2 | IV_FALSE | XLXN_1<2> | IV_FALSE | XLXN_1<3> | IV_TRUE | XLXN_1<5>
+
+SRFF_INSTANCE | y_OBUF.REG | y_OBUF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | y_OBUF.D | 3118 | ? | 0 | 0 | y_OBUF | NULL | NULL | y_OBUF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | y_OBUF.Q | 3121 | ? | 0 | 0 | y_OBUF | NULL | NULL | y_OBUF.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | y | zamek_schemat_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | y_OBUF | 3017 | ? | 0 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | y_OBUF.Q | y_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | y | 3018 | PO | 0 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | y | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | SoftPfbk | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT | zamek_schemat_COPY_0_COPY_0 | 2181038080 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Reset_IBUF | 3000 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | Reset_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_2 | 3010 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_2.Q | XLXN_2 | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT.UIM | 3019 | ? | 0 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT.Q | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT.SI | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Reset_IBUF | 3000 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | Reset_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_2 | 3010 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_2.Q | XLXN_2 | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT.D1 | 3123 | ? | 0 | 4096 | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT | NULL | NULL | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT.D2 | 3124 | ? | 0 | 4096 | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT | NULL | NULL | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_FALSE | Reset_IBUF | IV_FALSE | XLXN_2
+
+SRFF_INSTANCE | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT.REG | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT.D | 3122 | ? | 0 | 0 | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT | NULL | NULL | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT.Q | 3125 | ? | 0 | 0 | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT | NULL | NULL | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | NULL | EXP10_ | zamek_schemat_COPY_0_COPY_0 | 2147483648 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd1 | 3002 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd1.Q | XLXI_1/state_FSM_FFd1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd2 | 3003 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd2.Q | XLXI_1/state_FSM_FFd2 | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 4 | 0 | MC_EXPORT
+NODE | EXP10_.EXP | 3145 | ? | 0 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | EXP10_.EXP | EXP10_ | 4 | 0 | MC_EXPORT
+
+SIGNAL_INSTANCE | EXP10_.SI | EXP10_ | 0 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd1 | 3002 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd1.Q | XLXI_1/state_FSM_FFd1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd2 | 3003 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd2.Q | XLXI_1/state_FSM_FFd2 | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 7 | 9 | MC_SI_EXPORT
+SIGNAL | NODE | EXP10_.EXP | 3141 | ? | 0 | 0 | EXP10_ | NULL | NULL | EXP10_.SI | 7 | 9 | MC_SI_EXPORT
+SPPTERM | 2 | IV_TRUE | XLXI_1/state_FSM_FFd1 | IV_TRUE | XLXI_1/state_FSM_FFd2
+
+MACROCELL_INSTANCE | NULL | EXP11_ | zamek_schemat_COPY_0_COPY_0 | 2147483648 | 14 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Reset_IBUF | 3000 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | Reset_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd3 | 3001 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd3.Q | XLXI_1/state_FSM_FFd3 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd1 | 3002 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd1.Q | XLXI_1/state_FSM_FFd1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd4 | 3004 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd4.Q | XLXI_1/state_FSM_FFd4 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<4> | 3005 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<4>.Q | XLXN_1<4> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<0> | 3006 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<0>.Q | XLXN_1<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<1> | 3007 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<1>.Q | XLXN_1<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<6> | 3008 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<6>.Q | XLXN_1<6> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<7> | 3009 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<7>.Q | XLXN_1<7> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_2 | 3010 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_2.Q | XLXN_2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<2> | 3011 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<2>.Q | XLXN_1<2> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<3> | 3012 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<3>.Q | XLXN_1<3> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<5> | 3013 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<5>.Q | XLXN_1<5> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd2 | 3003 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd2.Q | XLXI_1/state_FSM_FFd2 | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 4 | 0 | MC_EXPORT
+NODE | EXP11_.EXP | 3146 | ? | 50 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | EXP11_.EXP | EXP11_ | 4 | 0 | MC_EXPORT
+
+SIGNAL_INSTANCE | EXP11_.SI | EXP11_ | 0 | 14 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Reset_IBUF | 3000 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | NULL | Reset_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd3 | 3001 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd3.Q | XLXI_1/state_FSM_FFd3 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd1 | 3002 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd1.Q | XLXI_1/state_FSM_FFd1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd4 | 3004 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd4.Q | XLXI_1/state_FSM_FFd4 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<4> | 3005 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<4>.Q | XLXN_1<4> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<0> | 3006 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<0>.Q | XLXN_1<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<1> | 3007 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<1>.Q | XLXN_1<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<6> | 3008 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<6>.Q | XLXN_1<6> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<7> | 3009 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<7>.Q | XLXN_1<7> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_2 | 3010 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_2.Q | XLXN_2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<2> | 3011 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<2>.Q | XLXN_1<2> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<3> | 3012 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<3>.Q | XLXN_1<3> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXN_1<5> | 3013 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXN_1<5>.Q | XLXN_1<5> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | XLXI_1/state_FSM_FFd2 | 3003 | ? | 51 | 0 | zamek_schemat_COPY_0_COPY_0 | NULL | XLXI_1/state_FSM_FFd2.Q | XLXI_1/state_FSM_FFd2 | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 7 | 9 | MC_SI_EXPORT
+SIGNAL | NODE | EXP11_.EXP | 3142 | ? | 50 | 0 | EXP11_ | NULL | NULL | EXP11_.SI | 7 | 9 | MC_SI_EXPORT
+SPPTERM | 13 | IV_FALSE | Reset_IBUF | IV_TRUE | XLXI_1/state_FSM_FFd3 | IV_TRUE | XLXI_1/state_FSM_FFd1 | IV_TRUE | XLXI_1/state_FSM_FFd4 | IV_FALSE | XLXN_1<4> | IV_TRUE | XLXN_1<0> | IV_TRUE | XLXN_1<1> | IV_FALSE | XLXN_1<6> | IV_FALSE | XLXN_1<7> | IV_TRUE | XLXN_2 | IV_FALSE | XLXN_1<2> | IV_FALSE | XLXN_1<3> | IV_TRUE | XLXN_1<5>
+SPPTERM | 13 | IV_FALSE | Reset_IBUF | IV_FALSE | XLXI_1/state_FSM_FFd3 | IV_FALSE | XLXI_1/state_FSM_FFd1 | IV_TRUE | XLXI_1/state_FSM_FFd2 | IV_FALSE | XLXI_1/state_FSM_FFd4 | IV_TRUE | XLXN_1<4> | IV_FALSE | XLXN_1<0> | IV_FALSE | XLXN_1<1> | IV_TRUE | XLXN_1<6> | IV_TRUE | XLXN_1<7> | IV_FALSE | XLXN_1<2> | IV_FALSE | XLXN_1<3> | IV_TRUE | XLXN_1<5>
+SPPTERM | 14 | IV_FALSE | Reset_IBUF | IV_TRUE | XLXI_1/state_FSM_FFd3 | IV_FALSE | XLXI_1/state_FSM_FFd1 | IV_FALSE | XLXI_1/state_FSM_FFd2 | IV_TRUE | XLXI_1/state_FSM_FFd4 | IV_TRUE | XLXN_1<4> | IV_FALSE | XLXN_1<0> | IV_TRUE | XLXN_1<1> | IV_FALSE | XLXN_1<6> | IV_FALSE | XLXN_1<7> | IV_TRUE | XLXN_2 | IV_FALSE | XLXN_1<2> | IV_FALSE | XLXN_1<3> | IV_TRUE | XLXN_1<5>
+
+FB_INSTANCE | FOOBAR1_ | zamek_schemat_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 5 | NULL | 0 | PS2_Data_IBUF | 1 | NULL | 0 | 2 | 49152
+FBPIN | 6 | XLXN_2 | 1 | PS2_Clk_IBUF | 1 | NULL | 0 | 3 | 49152
+FBPIN | 7 | XLXN_1<5> | 1 | NULL | 0 | NULL | 0
+FBPIN | 8 | XLXN_1<4> | 1 | NULL | 0 | NULL | 0 | 4 | 49152
+FBPIN | 9 | XLXN_1<3> | 1 | CLK_IBUF | 0 | NULL | 0 | 5 | 57344
+FBPIN | 10 | XLXN_1<2> | 1 | NULL | 0 | NULL | 0
+FBPIN | 11 | XLXN_1<1> | 1 | NULL | 0 | NULL | 0 | 6 | 57344
+FBPIN | 12 | XLXN_1<0> | 1 | NULL | 0 | NULL | 0
+FBPIN | 13 | XLXI_2/reg10b<9> | 1 | NULL | 0 | NULL | 0
+FBPIN | 14 | XLXI_2/reg10b<8> | 1 | NULL | 0 | NULL | 0 | 7 | 57344
+FBPIN | 15 | XLXI_2/Cnt<0> | 1 | NULL | 0 | NULL | 0 | 8 | 49152
+FBPIN | 16 | XLXI_2/Cnt<3> | 1 | NULL | 0 | NULL | 0
+FBPIN | 17 | XLXI_2/Cnt<2> | 1 | NULL | 0 | NULL | 0 | 9 | 49152
+FBPIN | 18 | XLXI_2/Cnt<1> | 1 | NULL | 0 | NULL | 0
+
+FB_INSTANCE | FOOBAR2_ | zamek_schemat_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 1 | XLXI_1/state_FSM_FFd4 | 1 | NULL | 0 | NULL | 0
+FBPIN | 2 | y_OBUF | 1 | NULL | 0 | y | 1 | 35 | 49152
+FBPIN | 3 | EXP10_ | 1 | NULL | 0 | NULL | 0
+FBPIN | 9 | NULL | 0 | Reset_IBUF | 1 | NULL | 0 | 39 | 51200
+FBPIN | 14 | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT | 1 | NULL | 0 | NULL | 0 | 42 | 53248
+FBPIN | 15 | XLXI_1/state_FSM_FFd1 | 1 | NULL | 0 | NULL | 0 | 43 | 49152
+FBPIN | 16 | EXP11_ | 1 | NULL | 0 | NULL | 0
+FBPIN | 17 | XLXI_1/state_FSM_FFd2 | 1 | NULL | 0 | NULL | 0 | 44 | 49152
+FBPIN | 18 | XLXI_1/state_FSM_FFd3 | 1 | NULL | 0 | NULL | 0
+
+FB_INSTANCE | FOOBAR3_ | zamek_schemat_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 17 | XLXN_1<7> | 1 | NULL | 0 | NULL | 0 | 22 | 49152
+FBPIN | 18 | XLXN_1<6> | 1 | NULL | 0 | NULL | 0
+
+FB_INSTANCE | FOOBAR4_ | zamek_schemat_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | INPUTPINS_FOOBAR5_ | zamek_schemat_COPY_0_COPY_0 | 0 | 0 | 0
+
+
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 2 | PS2_Clk | 3 | 7 | XLXN_1<4> | NULL | 9 | XLXN_1<2> | NULL | 10 | XLXN_1<1> | NULL | 17 | XLXI_2/Cnt<1> | NULL
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 19 | XLXI_2/Cnt<0> | NULL | 20 | PS2_Data | 2 | 26 | XLXI_2/reg10b<9> | NULL | 29 | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT.UIM | NULL | 33 | XLXN_1<6> | NULL
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 39 | XLXN_1<5> | NULL | 41 | XLXN_1<3> | NULL | 48 | XLXI_2/Cnt<2> | NULL | 52 | XLXI_2/Cnt<3> | NULL
+
+FB_IMUX_INDEX | FOOBAR1_ | -1 | -1 | 110 | -1 | -1 | -1 | -1 | 7 | -1 | 9 | 10 | -1 | -1 | -1 | -1 | -1 | -1 | 17 | -1 | 14 | 108 | -1 | -1 | -1 | -1 | -1 | 12 | -1 | -1 | 31 | -1 | -1 | -1 | 53 | -1 | -1 | -1 | -1 | -1 | 6 | -1 | 8 | -1 | -1 | -1 | -1 | -1 | -1 | 16 | -1 | -1 | -1 | 15 | -1
+
+
+FB_ORDER_OF_INPUTS | FOOBAR2_ | 7 | XLXN_1<4> | NULL | 9 | XLXN_1<2> | NULL | 10 | XLXN_1<1> | NULL | 14 | XLXI_1/state_FSM_FFd1 | NULL | 16 | XLXI_1/state_FSM_FFd2 | NULL
+FB_ORDER_OF_INPUTS | FOOBAR2_ | 21 | XLXN_2 | NULL | 33 | XLXN_1<6> | NULL | 37 | XLXI_1/state_FSM_FFd4 | NULL | 39 | XLXN_1<5> | NULL | 41 | XLXN_1<3> | NULL
+FB_ORDER_OF_INPUTS | FOOBAR2_ | 44 | XLXN_1<7> | NULL | 49 | XLXI_1/state_FSM_FFd3 | NULL | 51 | XLXN_1<0> | NULL | 52 | Reset | 39
+
+FB_IMUX_INDEX | FOOBAR2_ | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 7 | -1 | 9 | 10 | -1 | -1 | -1 | 32 | -1 | 34 | -1 | -1 | -1 | -1 | 5 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 53 | -1 | -1 | -1 | 18 | -1 | 6 | -1 | 8 | -1 | -1 | 52 | -1 | -1 | -1 | -1 | 35 | -1 | 11 | 86 | -1
+
+
+FB_ORDER_OF_INPUTS | FOOBAR3_ | 2 | PS2_Clk | 3 | 13 | XLXI_2/reg10b<8> | NULL | 44 | XLXN_1<7> | NULL
+
+FB_IMUX_INDEX | FOOBAR3_ | -1 | -1 | 110 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 13 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 52 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
+
+
+GLOBAL_FCLK | CLK | 0 | 0
+
+TIME_TSPEC | TS1000 | PERIOD:PERIOD_CLK:500.000nS:HIGH:50.000000000:% | PERIOD_CLK | 10003 | 5000 | 500 | NULL

@@ -1,0 +1,355 @@
+NDS Database:  version P.20131013
+
+NDS_INFO | xc9500xl | 9572XL44PC | XC9572XL-10-PC44
+
+DEVICE | 9572XL | 9572XL44PC | 
+
+NETWORK | schematic_modul_1 | 0 | 0 | 16391
+
+INPUT_INSTANCE | 0 | 0 | NULL | X_0_IBUF | schematic_modul_1_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | X<0> | 1806 | PI | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | X_0_IBUF | 1788 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_0_IBUF | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | X_2_IBUF | schematic_modul_1_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | X<2> | 1807 | PI | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | X_2_IBUF | 1789 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_2_IBUF | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | X_1_IBUF | schematic_modul_1_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | X<1> | 1808 | PI | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | X_1_IBUF | 1790 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_1_IBUF | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | X_3_IBUF | schematic_modul_1_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | X<3> | 1809 | PI | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | X_3_IBUF | 1791 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_3_IBUF | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | OptxMapped | D7S_S_1_OBUF | schematic_modul_1_COPY_0_COPY_0 | 2155872256 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_2_IBUF | 1789 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_1_IBUF | 1790 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_3_IBUF | 1791 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_3_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_0_IBUF | 1788 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_0_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | D7S_S_1_OBUF | 1792 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | D7S_S_1_OBUF.Q | D7S_S_1_OBUF | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | D7S_S_1_OBUF.SI | D7S_S_1_OBUF | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_2_IBUF | 1789 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_1_IBUF | 1790 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_3_IBUF | 1791 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_3_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_0_IBUF | 1788 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_0_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | D7S_S_1_OBUF.D1 | 1811 | ? | 0 | 4096 | D7S_S_1_OBUF | NULL | NULL | D7S_S_1_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | D7S_S_1_OBUF.D2 | 1812 | ? | 0 | 4096 | D7S_S_1_OBUF | NULL | NULL | D7S_S_1_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_TRUE | X_0_IBUF | IV_FALSE | X_2_IBUF | IV_TRUE | X_3_IBUF
+SPPTERM | 3 | IV_FALSE | X_0_IBUF | IV_FALSE | X_1_IBUF | IV_TRUE | X_3_IBUF
+SPPTERM | 3 | IV_FALSE | X_2_IBUF | IV_TRUE | X_1_IBUF | IV_FALSE | X_3_IBUF
+
+SRFF_INSTANCE | D7S_S_1_OBUF.REG | D7S_S_1_OBUF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | D7S_S_1_OBUF.D | 1810 | ? | 0 | 0 | D7S_S_1_OBUF | NULL | NULL | D7S_S_1_OBUF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | D7S_S_1_OBUF.Q | 1813 | ? | 0 | 0 | D7S_S_1_OBUF | NULL | NULL | D7S_S_1_OBUF.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | OptxMapped | D7S_S_2_OBUF | schematic_modul_1_COPY_0_COPY_0 | 2155872256 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_0_IBUF | 1788 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_1_IBUF | 1790 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_3_IBUF | 1791 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_3_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_2_IBUF | 1789 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_2_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | D7S_S_2_OBUF | 1793 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | D7S_S_2_OBUF.Q | D7S_S_2_OBUF | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | D7S_S_2_OBUF.SI | D7S_S_2_OBUF | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_0_IBUF | 1788 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_1_IBUF | 1790 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_3_IBUF | 1791 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_3_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_2_IBUF | 1789 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_2_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | D7S_S_2_OBUF.D1 | 1815 | ? | 0 | 4096 | D7S_S_2_OBUF | NULL | NULL | D7S_S_2_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | D7S_S_2_OBUF.D2 | 1816 | ? | 0 | 4096 | D7S_S_2_OBUF | NULL | NULL | D7S_S_2_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_TRUE | X_0_IBUF | IV_FALSE | X_2_IBUF | IV_TRUE | X_3_IBUF
+SPPTERM | 3 | IV_TRUE | X_0_IBUF | IV_TRUE | X_1_IBUF | IV_TRUE | X_3_IBUF
+SPPTERM | 4 | IV_FALSE | X_0_IBUF | IV_TRUE | X_2_IBUF | IV_FALSE | X_1_IBUF | IV_TRUE | X_3_IBUF
+
+SRFF_INSTANCE | D7S_S_2_OBUF.REG | D7S_S_2_OBUF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | D7S_S_2_OBUF.D | 1814 | ? | 0 | 0 | D7S_S_2_OBUF | NULL | NULL | D7S_S_2_OBUF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | D7S_S_2_OBUF.Q | 1817 | ? | 0 | 0 | D7S_S_2_OBUF | NULL | NULL | D7S_S_2_OBUF.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | OptxMapped | D7S_S_3_OBUF | schematic_modul_1_COPY_0_COPY_0 | 2155872256 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_0_IBUF | 1788 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_2_IBUF | 1789 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_3_IBUF | 1791 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_3_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_1_IBUF | 1790 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_1_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | D7S_S_3_OBUF | 1794 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | D7S_S_3_OBUF.Q | D7S_S_3_OBUF | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | D7S_S_3_OBUF.SI | D7S_S_3_OBUF | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_0_IBUF | 1788 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_2_IBUF | 1789 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_3_IBUF | 1791 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_3_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_1_IBUF | 1790 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_1_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | D7S_S_3_OBUF.D1 | 1819 | ? | 0 | 4096 | D7S_S_3_OBUF | NULL | NULL | D7S_S_3_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | D7S_S_3_OBUF.D2 | 1820 | ? | 0 | 4096 | D7S_S_3_OBUF | NULL | NULL | D7S_S_3_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_FALSE | X_0_IBUF | IV_TRUE | X_2_IBUF | IV_FALSE | X_1_IBUF
+SPPTERM | 3 | IV_FALSE | X_0_IBUF | IV_TRUE | X_2_IBUF | IV_TRUE | X_3_IBUF
+SPPTERM | 4 | IV_TRUE | X_0_IBUF | IV_TRUE | X_2_IBUF | IV_TRUE | X_1_IBUF | IV_FALSE | X_3_IBUF
+SPPTERM | 4 | IV_TRUE | X_0_IBUF | IV_FALSE | X_2_IBUF | IV_FALSE | X_1_IBUF | IV_FALSE | X_3_IBUF
+
+SRFF_INSTANCE | D7S_S_3_OBUF.REG | D7S_S_3_OBUF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | D7S_S_3_OBUF.D | 1818 | ? | 0 | 0 | D7S_S_3_OBUF | NULL | NULL | D7S_S_3_OBUF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | D7S_S_3_OBUF.Q | 1821 | ? | 0 | 0 | D7S_S_3_OBUF | NULL | NULL | D7S_S_3_OBUF.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | OptxMapped | D7S_S_0_OBUF | schematic_modul_1_COPY_0_COPY_0 | 2155872256 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_0_IBUF | 1788 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_2_IBUF | 1789 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_3_IBUF | 1791 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_3_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_1_IBUF | 1790 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_1_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | D7S_S_0_OBUF | 1795 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | D7S_S_0_OBUF.Q | D7S_S_0_OBUF | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | D7S_S_0_OBUF.SI | D7S_S_0_OBUF | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_0_IBUF | 1788 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_2_IBUF | 1789 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_3_IBUF | 1791 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_3_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_1_IBUF | 1790 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_1_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | D7S_S_0_OBUF.D1 | 1823 | ? | 0 | 4096 | D7S_S_0_OBUF | NULL | NULL | D7S_S_0_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | D7S_S_0_OBUF.D2 | 1824 | ? | 0 | 4096 | D7S_S_0_OBUF | NULL | NULL | D7S_S_0_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_FALSE | X_0_IBUF | IV_FALSE | X_2_IBUF | IV_TRUE | X_3_IBUF
+SPPTERM | 3 | IV_FALSE | X_0_IBUF | IV_TRUE | X_1_IBUF | IV_TRUE | X_3_IBUF
+SPPTERM | 4 | IV_TRUE | X_0_IBUF | IV_FALSE | X_2_IBUF | IV_FALSE | X_1_IBUF | IV_FALSE | X_3_IBUF
+
+SRFF_INSTANCE | D7S_S_0_OBUF.REG | D7S_S_0_OBUF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | D7S_S_0_OBUF.D | 1822 | ? | 0 | 0 | D7S_S_0_OBUF | NULL | NULL | D7S_S_0_OBUF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | D7S_S_0_OBUF.Q | 1825 | ? | 0 | 0 | D7S_S_0_OBUF | NULL | NULL | D7S_S_0_OBUF.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | OptxMapped | D7S_S_4_OBUF | schematic_modul_1_COPY_0_COPY_0 | 2155872256 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_0_IBUF | 1788 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_3_IBUF | 1791 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_3_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_2_IBUF | 1789 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_1_IBUF | 1790 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_1_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | D7S_S_4_OBUF | 1796 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | D7S_S_4_OBUF.Q | D7S_S_4_OBUF | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | D7S_S_4_OBUF.SI | D7S_S_4_OBUF | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_0_IBUF | 1788 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_3_IBUF | 1791 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_3_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_2_IBUF | 1789 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_1_IBUF | 1790 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_1_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | D7S_S_4_OBUF.D1 | 1827 | ? | 0 | 4096 | D7S_S_4_OBUF | NULL | NULL | D7S_S_4_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | D7S_S_4_OBUF.D2 | 1828 | ? | 0 | 4096 | D7S_S_4_OBUF | NULL | NULL | D7S_S_4_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_FALSE | X_0_IBUF | IV_FALSE | X_3_IBUF
+SPPTERM | 3 | IV_FALSE | X_0_IBUF | IV_TRUE | X_2_IBUF | IV_TRUE | X_1_IBUF
+SPPTERM | 3 | IV_FALSE | X_2_IBUF | IV_FALSE | X_1_IBUF | IV_FALSE | X_3_IBUF
+
+SRFF_INSTANCE | D7S_S_4_OBUF.REG | D7S_S_4_OBUF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | D7S_S_4_OBUF.D | 1826 | ? | 0 | 0 | D7S_S_4_OBUF | NULL | NULL | D7S_S_4_OBUF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | D7S_S_4_OBUF.Q | 1829 | ? | 0 | 0 | D7S_S_4_OBUF | NULL | NULL | D7S_S_4_OBUF.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | OptxMapped | D7S_S_5_OBUF | schematic_modul_1_COPY_0_COPY_0 | 2155872256 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_0_IBUF | 1788 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_1_IBUF | 1790 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_3_IBUF | 1791 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_3_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_2_IBUF | 1789 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_2_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | D7S_S_5_OBUF | 1797 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | D7S_S_5_OBUF.Q | D7S_S_5_OBUF | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | D7S_S_5_OBUF.SI | D7S_S_5_OBUF | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_0_IBUF | 1788 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_1_IBUF | 1790 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_3_IBUF | 1791 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_3_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_2_IBUF | 1789 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_2_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | D7S_S_5_OBUF.D1 | 1831 | ? | 0 | 4096 | D7S_S_5_OBUF | NULL | NULL | D7S_S_5_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | D7S_S_5_OBUF.D2 | 1832 | ? | 0 | 4096 | D7S_S_5_OBUF | NULL | NULL | D7S_S_5_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_FALSE | X_0_IBUF | IV_TRUE | X_1_IBUF | IV_TRUE | X_3_IBUF
+SPPTERM | 3 | IV_TRUE | X_2_IBUF | IV_TRUE | X_1_IBUF | IV_TRUE | X_3_IBUF
+SPPTERM | 4 | IV_FALSE | X_0_IBUF | IV_FALSE | X_2_IBUF | IV_FALSE | X_1_IBUF | IV_FALSE | X_3_IBUF
+
+SRFF_INSTANCE | D7S_S_5_OBUF.REG | D7S_S_5_OBUF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | D7S_S_5_OBUF.D | 1830 | ? | 0 | 0 | D7S_S_5_OBUF | NULL | NULL | D7S_S_5_OBUF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | D7S_S_5_OBUF.Q | 1833 | ? | 0 | 0 | D7S_S_5_OBUF | NULL | NULL | D7S_S_5_OBUF.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | OptxMapped | D7S_S_6_OBUF | schematic_modul_1_COPY_0_COPY_0 | 2155872256 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_0_IBUF | 1788 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_1_IBUF | 1790 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_3_IBUF | 1791 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_3_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_2_IBUF | 1789 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_2_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | D7S_S_6_OBUF | 1798 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | D7S_S_6_OBUF.Q | D7S_S_6_OBUF | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | D7S_S_6_OBUF.SI | D7S_S_6_OBUF | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_0_IBUF | 1788 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_1_IBUF | 1790 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_3_IBUF | 1791 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_3_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | X_2_IBUF | 1789 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | X_2_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | D7S_S_6_OBUF.D1 | 1835 | ? | 0 | 4096 | D7S_S_6_OBUF | NULL | NULL | D7S_S_6_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | D7S_S_6_OBUF.D2 | 1836 | ? | 0 | 4096 | D7S_S_6_OBUF | NULL | NULL | D7S_S_6_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_TRUE | X_0_IBUF | IV_FALSE | X_1_IBUF | IV_TRUE | X_3_IBUF
+SPPTERM | 4 | IV_FALSE | X_0_IBUF | IV_TRUE | X_2_IBUF | IV_TRUE | X_1_IBUF | IV_TRUE | X_3_IBUF
+SPPTERM | 4 | IV_FALSE | X_0_IBUF | IV_TRUE | X_2_IBUF | IV_FALSE | X_1_IBUF | IV_FALSE | X_3_IBUF
+
+SRFF_INSTANCE | D7S_S_6_OBUF.REG | D7S_S_6_OBUF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | D7S_S_6_OBUF.D | 1834 | ? | 0 | 0 | D7S_S_6_OBUF | NULL | NULL | D7S_S_6_OBUF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | D7S_S_6_OBUF.Q | 1837 | ? | 0 | 0 | D7S_S_6_OBUF | NULL | NULL | D7S_S_6_OBUF.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | D7S_S<1> | schematic_modul_1_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | D7S_S_1_OBUF | 1792 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | D7S_S_1_OBUF.Q | D7S_S_1_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | D7S_S<1> | 1799 | PO | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | D7S_S<1> | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | D7S_S<2> | schematic_modul_1_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | D7S_S_2_OBUF | 1793 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | D7S_S_2_OBUF.Q | D7S_S_2_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | D7S_S<2> | 1800 | PO | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | D7S_S<2> | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | D7S_S<3> | schematic_modul_1_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | D7S_S_3_OBUF | 1794 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | D7S_S_3_OBUF.Q | D7S_S_3_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | D7S_S<3> | 1801 | PO | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | D7S_S<3> | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | D7S_S<0> | schematic_modul_1_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | D7S_S_0_OBUF | 1795 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | D7S_S_0_OBUF.Q | D7S_S_0_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | D7S_S<0> | 1802 | PO | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | D7S_S<0> | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | D7S_S<4> | schematic_modul_1_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | D7S_S_4_OBUF | 1796 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | D7S_S_4_OBUF.Q | D7S_S_4_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | D7S_S<4> | 1803 | PO | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | D7S_S<4> | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | D7S_S<5> | schematic_modul_1_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | D7S_S_5_OBUF | 1797 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | D7S_S_5_OBUF.Q | D7S_S_5_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | D7S_S<5> | 1804 | PO | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | D7S_S<5> | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | D7S_S<6> | schematic_modul_1_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | D7S_S_6_OBUF | 1798 | ? | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | D7S_S_6_OBUF.Q | D7S_S_6_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | D7S_S<6> | 1805 | PO | 0 | 0 | schematic_modul_1_COPY_0_COPY_0 | NULL | NULL | D7S_S<6> | 0 | 6 | OI_OUT
+
+FB_INSTANCE | FOOBAR1_ | schematic_modul_1_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR2_ | schematic_modul_1_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 8 | NULL | 0 | X_3_IBUF | 1 | NULL | 0 | 38 | 49152
+FBPIN | 11 | NULL | 0 | X_1_IBUF | 1 | NULL | 0 | 40 | 53248
+FBPIN | 14 | NULL | 0 | X_0_IBUF | 1 | NULL | 0 | 42 | 53248
+FBPIN | 15 | NULL | 0 | X_2_IBUF | 1 | NULL | 0 | 43 | 49152
+
+FB_INSTANCE | FOOBAR3_ | schematic_modul_1_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 2 | D7S_S_5_OBUF | 1 | NULL | 0 | D7S_S<5> | 1 | 11 | 49152
+FBPIN | 5 | D7S_S_0_OBUF | 1 | NULL | 0 | D7S_S<0> | 1 | 12 | 49152
+FBPIN | 8 | D7S_S_1_OBUF | 1 | NULL | 0 | D7S_S<1> | 1 | 13 | 49152
+FBPIN | 9 | D7S_S_4_OBUF | 1 | NULL | 0 | D7S_S<4> | 1 | 14 | 49152
+FBPIN | 14 | D7S_S_3_OBUF | 1 | NULL | 0 | D7S_S<3> | 1 | 19 | 49152
+FBPIN | 15 | D7S_S_6_OBUF | 1 | NULL | 0 | D7S_S<6> | 1 | 20 | 49152
+FBPIN | 17 | D7S_S_2_OBUF | 1 | NULL | 0 | D7S_S<2> | 1 | 22 | 49152
+
+FB_INSTANCE | FOOBAR4_ | schematic_modul_1_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | INPUTPINS_FOOBAR5_ | schematic_modul_1_COPY_0_COPY_0 | 0 | 0 | 0
+
+BUSINFO | D7S_S<6:0> | 7 | 0 | 1 | D7S_S<0> | 6 | D7S_S<1> | 5 | D7S_S<2> | 4 | D7S_S<3> | 3 | D7S_S<4> | 2 | D7S_S<5> | 1 | D7S_S<6> | 0
+BUSINFO | X<3:0> | 4 | 0 | 0 | X<0> | 3 | X<1> | 2 | X<2> | 1 | X<3> | 0
+
+FB_ORDER_OF_INPUTS | FOOBAR3_ | 8 | X<0> | 42 | 18 | X<2> | 43 | 43 | X<3> | 38 | 49 | X<1> | 40
+
+FB_IMUX_INDEX | FOOBAR3_ | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 98 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 102 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 84 | -1 | -1 | -1 | -1 | -1 | 92 | -1 | -1 | -1 | -1
+

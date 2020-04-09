@@ -1,0 +1,385 @@
+MDF Database:  version 1.0
+MDF_INFO | zamek_schemat | XC9572XL-10-PC44
+MACROCELL | 0 | 14 | XLXI_2/Cnt<0>
+ATTRIBUTES | 4326192 | 0
+OUTPUTMC | 4 | 0 | 17 | 0 | 16 | 0 | 15 | 0 | 5
+INPUTS | 2 | PS2_Clk  | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT
+INPUTMC | 1 | 1 | 13
+INPUTP | 1 | 13
+EQ | 3 | 
+   XLXI_2/Cnt<0>.T = Vcc;
+   XLXI_2/Cnt<0>.CLK = !PS2_Clk;
+   XLXI_2/Cnt<0>.AR = !XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT;
+
+MACROCELL | 0 | 17 | XLXI_2/Cnt<1>
+ATTRIBUTES | 4326192 | 0
+OUTPUTMC | 3 | 0 | 16 | 0 | 15 | 0 | 5
+INPUTS | 3 | XLXI_2/Cnt<0>  | PS2_Clk  | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT
+INPUTMC | 2 | 0 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 3 | 
+   XLXI_2/Cnt<1>.T = XLXI_2/Cnt<0>;
+   XLXI_2/Cnt<1>.CLK = !PS2_Clk;
+   XLXI_2/Cnt<1>.AR = !XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT;
+
+MACROCELL | 0 | 16 | XLXI_2/Cnt<2>
+ATTRIBUTES | 4326192 | 0
+OUTPUTMC | 2 | 0 | 15 | 0 | 5
+INPUTS | 4 | XLXI_2/Cnt<0>  | XLXI_2/Cnt<1>  | PS2_Clk  | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT
+INPUTMC | 3 | 0 | 14 | 0 | 17 | 1 | 13
+INPUTP | 1 | 13
+EQ | 3 | 
+   XLXI_2/Cnt<2>.T = XLXI_2/Cnt<0> & XLXI_2/Cnt<1>;
+   XLXI_2/Cnt<2>.CLK = !PS2_Clk;
+   XLXI_2/Cnt<2>.AR = !XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT;
+
+MACROCELL | 0 | 15 | XLXI_2/Cnt<3>
+ATTRIBUTES | 4326192 | 0
+OUTPUTMC | 1 | 0 | 5
+INPUTS | 5 | XLXI_2/Cnt<0>  | XLXI_2/Cnt<1>  | XLXI_2/Cnt<2>  | PS2_Clk  | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT
+INPUTMC | 4 | 0 | 14 | 0 | 17 | 0 | 16 | 1 | 13
+INPUTP | 1 | 13
+EQ | 3 | 
+   XLXI_2/Cnt<3>.T = XLXI_2/Cnt<0> & XLXI_2/Cnt<1> & XLXI_2/Cnt<2>;
+   XLXI_2/Cnt<3>.CLK = !PS2_Clk;
+   XLXI_2/Cnt<3>.AR = !XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT;
+
+MACROCELL | 1 | 17 | XLXI_1/state_FSM_FFd3
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 6 | 1 | 17 | 1 | 14 | 1 | 16 | 1 | 0 | 1 | 1 | 1 | 15
+INPUTS | 15 | Reset  | XLXI_1/state_FSM_FFd3  | XLXN_2  | XLXI_1/state_FSM_FFd1  | XLXI_1/state_FSM_FFd4  | XLXN_1<4>  | XLXN_1<0>  | XLXN_1<1>  | XLXN_1<6>  | XLXN_1<7>  | XLXN_1<2>  | XLXN_1<3>  | XLXN_1<5>  | XLXI_1/state_FSM_FFd2  | XLXI_1/state_FSM_FFd2.EXP
+INPUTMC | 14 | 1 | 17 | 0 | 5 | 1 | 14 | 1 | 0 | 0 | 7 | 0 | 11 | 0 | 10 | 2 | 17 | 2 | 16 | 0 | 9 | 0 | 8 | 0 | 6 | 1 | 16 | 1 | 16
+INPUTP | 1 | 92
+IMPORTS | 1 | 1 | 16
+EQ | 27 | 
+   XLXI_1/state_FSM_FFd3.D = !Reset & XLXI_1/state_FSM_FFd3 & !XLXN_2
+	# !Reset & XLXI_1/state_FSM_FFd3 & 
+	XLXI_1/state_FSM_FFd1 & !XLXI_1/state_FSM_FFd4 & XLXN_1<4> & !XLXN_1<0> & 
+	!XLXN_1<1> & XLXN_1<6> & XLXN_1<7> & !XLXN_1<2> & !XLXN_1<3> & 
+	XLXN_1<5>
+	# !Reset & XLXI_1/state_FSM_FFd3 & 
+	XLXI_1/state_FSM_FFd2 & !XLXI_1/state_FSM_FFd4 & !XLXN_1<4> & XLXN_1<0> & 
+	!XLXN_1<1> & !XLXN_1<6> & !XLXN_1<7> & !XLXN_1<2> & !XLXN_1<3> & 
+	XLXN_1<5>
+	# !Reset & XLXI_1/state_FSM_FFd3 & 
+	!XLXI_1/state_FSM_FFd1 & !XLXI_1/state_FSM_FFd2 & !XLXI_1/state_FSM_FFd4 & 
+	XLXN_1<4> & !XLXN_1<0> & !XLXN_1<1> & !XLXN_1<6> & !XLXN_1<7> & 
+	XLXN_1<2> & XLXN_1<3> & !XLXN_1<5>
+	# !Reset & !XLXI_1/state_FSM_FFd3 & 
+	XLXI_1/state_FSM_FFd1 & XLXI_1/state_FSM_FFd4 & !XLXN_1<4> & XLXN_1<0> & 
+	XLXN_1<1> & !XLXN_1<6> & !XLXN_1<7> & XLXN_2 & !XLXN_1<2> & 
+	!XLXN_1<3> & XLXN_1<5>
+;Imported pterms FB2_17
+	# !Reset & !XLXI_1/state_FSM_FFd3 & 
+	XLXI_1/state_FSM_FFd2 & XLXI_1/state_FSM_FFd4 & XLXN_1<4> & !XLXN_1<0> & 
+	XLXN_1<1> & !XLXN_1<6> & !XLXN_1<7> & XLXN_2 & !XLXN_1<2> & 
+	!XLXN_1<3> & XLXN_1<5>
+	# !Reset & !XLXI_1/state_FSM_FFd3 & 
+	!XLXI_1/state_FSM_FFd1 & !XLXI_1/state_FSM_FFd2 & XLXI_1/state_FSM_FFd4 & 
+	XLXN_1<4> & !XLXN_1<0> & !XLXN_1<1> & XLXN_1<6> & XLXN_1<7> & 
+	XLXN_2 & !XLXN_1<2> & !XLXN_1<3> & XLXN_1<5>;
+   XLXI_1/state_FSM_FFd3.CLK = CLK;	// GCK
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 1 | 14 | XLXI_1/state_FSM_FFd1
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 7 | 1 | 17 | 1 | 14 | 1 | 15 | 1 | 0 | 1 | 1 | 1 | 2 | 1 | 16
+INPUTS | 14 | Reset  | XLXI_1/state_FSM_FFd1  | XLXN_2  | XLXI_1/state_FSM_FFd4  | XLXN_1<4>  | XLXN_1<0>  | XLXN_1<1>  | XLXN_1<6>  | XLXN_1<7>  | XLXN_1<2>  | XLXN_1<3>  | XLXN_1<5>  | XLXI_1/state_FSM_FFd3  | XLXI_1/state_FSM_FFd2
+INPUTMC | 13 | 1 | 14 | 0 | 5 | 1 | 0 | 0 | 7 | 0 | 11 | 0 | 10 | 2 | 17 | 2 | 16 | 0 | 9 | 0 | 8 | 0 | 6 | 1 | 17 | 1 | 16
+INPUTP | 1 | 92
+EQ | 17 | 
+   XLXI_1/state_FSM_FFd1.D = !Reset & XLXI_1/state_FSM_FFd1 & !XLXN_2
+	# !Reset & XLXI_1/state_FSM_FFd1 & 
+	XLXI_1/state_FSM_FFd4 & !XLXN_1<4> & XLXN_1<0> & XLXN_1<1> & !XLXN_1<6> & 
+	!XLXN_1<7> & !XLXN_1<2> & !XLXN_1<3> & XLXN_1<5>
+	# !Reset & XLXI_1/state_FSM_FFd3 & 
+	XLXI_1/state_FSM_FFd1 & !XLXI_1/state_FSM_FFd4 & XLXN_1<4> & !XLXN_1<0> & 
+	!XLXN_1<1> & XLXN_1<6> & XLXN_1<7> & !XLXN_1<2> & !XLXN_1<3> & 
+	XLXN_1<5>
+	# !Reset & XLXI_1/state_FSM_FFd3 & 
+	XLXI_1/state_FSM_FFd2 & XLXI_1/state_FSM_FFd4 & XLXN_1<4> & !XLXN_1<0> & 
+	!XLXN_1<1> & XLXN_1<6> & XLXN_1<7> & XLXN_2 & !XLXN_1<2> & 
+	!XLXN_1<3> & XLXN_1<5>
+	# !Reset & !XLXI_1/state_FSM_FFd3 & 
+	XLXI_1/state_FSM_FFd1 & !XLXI_1/state_FSM_FFd2 & !XLXI_1/state_FSM_FFd4 & 
+	!XLXN_1<4> & XLXN_1<0> & !XLXN_1<1> & !XLXN_1<6> & !XLXN_1<7> & 
+	!XLXN_1<2> & !XLXN_1<3> & XLXN_1<5>;
+   XLXI_1/state_FSM_FFd1.CLK = CLK;	// GCK
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 1 | 16 | XLXI_1/state_FSM_FFd2
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 7 | 1 | 17 | 1 | 14 | 1 | 16 | 1 | 0 | 1 | 1 | 1 | 2 | 1 | 15
+INPUTS | 15 | Reset  | XLXI_1/state_FSM_FFd2  | XLXN_2  | XLXI_1/state_FSM_FFd3  | XLXI_1/state_FSM_FFd4  | XLXN_1<4>  | XLXN_1<0>  | XLXN_1<1>  | XLXN_1<6>  | XLXN_1<7>  | XLXN_1<2>  | XLXN_1<3>  | XLXN_1<5>  | XLXI_1/state_FSM_FFd1  | EXP11_.EXP
+INPUTMC | 14 | 1 | 16 | 0 | 5 | 1 | 17 | 1 | 0 | 0 | 7 | 0 | 11 | 0 | 10 | 2 | 17 | 2 | 16 | 0 | 9 | 0 | 8 | 0 | 6 | 1 | 14 | 1 | 15
+INPUTP | 1 | 92
+EXPORTS | 1 | 1 | 17
+IMPORTS | 1 | 1 | 15
+EQ | 31 | 
+   XLXI_1/state_FSM_FFd2.D = !Reset & XLXI_1/state_FSM_FFd2 & !XLXN_2
+	# !Reset & XLXI_1/state_FSM_FFd3 & 
+	XLXI_1/state_FSM_FFd2 & !XLXI_1/state_FSM_FFd4 & !XLXN_1<4> & XLXN_1<0> & 
+	!XLXN_1<1> & !XLXN_1<6> & !XLXN_1<7> & !XLXN_1<2> & !XLXN_1<3> & 
+	XLXN_1<5>
+	# !Reset & !XLXI_1/state_FSM_FFd3 & 
+	XLXI_1/state_FSM_FFd2 & XLXI_1/state_FSM_FFd4 & XLXN_1<4> & !XLXN_1<0> & 
+	XLXN_1<1> & !XLXN_1<6> & !XLXN_1<7> & !XLXN_1<2> & !XLXN_1<3> & 
+	XLXN_1<5>
+;Imported pterms FB2_16
+	# !Reset & XLXI_1/state_FSM_FFd3 & 
+	XLXI_1/state_FSM_FFd1 & XLXI_1/state_FSM_FFd4 & !XLXN_1<4> & XLXN_1<0> & 
+	XLXN_1<1> & !XLXN_1<6> & !XLXN_1<7> & XLXN_2 & !XLXN_1<2> & 
+	!XLXN_1<3> & XLXN_1<5>
+	# !Reset & !XLXI_1/state_FSM_FFd3 & 
+	!XLXI_1/state_FSM_FFd1 & XLXI_1/state_FSM_FFd2 & !XLXI_1/state_FSM_FFd4 & 
+	XLXN_1<4> & !XLXN_1<0> & !XLXN_1<1> & XLXN_1<6> & XLXN_1<7> & 
+	!XLXN_1<2> & !XLXN_1<3> & XLXN_1<5>
+	# !Reset & XLXI_1/state_FSM_FFd3 & 
+	!XLXI_1/state_FSM_FFd1 & !XLXI_1/state_FSM_FFd2 & XLXI_1/state_FSM_FFd4 & 
+	XLXN_1<4> & !XLXN_1<0> & XLXN_1<1> & !XLXN_1<6> & !XLXN_1<7> & 
+	XLXN_2 & !XLXN_1<2> & !XLXN_1<3> & XLXN_1<5>;
+   XLXI_1/state_FSM_FFd2.CLK = CLK;	// GCK
+    XLXI_1/state_FSM_FFd2.EXP  =  !Reset & !XLXI_1/state_FSM_FFd3 & 
+	XLXI_1/state_FSM_FFd2 & XLXI_1/state_FSM_FFd4 & XLXN_1<4> & !XLXN_1<0> & 
+	XLXN_1<1> & !XLXN_1<6> & !XLXN_1<7> & XLXN_2 & !XLXN_1<2> & 
+	!XLXN_1<3> & XLXN_1<5>
+	# !Reset & !XLXI_1/state_FSM_FFd3 & 
+	!XLXI_1/state_FSM_FFd1 & !XLXI_1/state_FSM_FFd2 & XLXI_1/state_FSM_FFd4 & 
+	XLXN_1<4> & !XLXN_1<0> & !XLXN_1<1> & XLXN_1<6> & XLXN_1<7> & 
+	XLXN_2 & !XLXN_1<2> & !XLXN_1<3> & XLXN_1<5>
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 1 | 0 | XLXI_1/state_FSM_FFd4
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 6 | 1 | 17 | 1 | 14 | 1 | 16 | 1 | 0 | 1 | 1 | 1 | 15
+INPUTS | 15 | Reset  | XLXI_1/state_FSM_FFd4  | XLXN_2  | XLXI_1/state_FSM_FFd3  | XLXI_1/state_FSM_FFd1  | XLXN_1<4>  | XLXN_1<0>  | XLXN_1<1>  | XLXN_1<6>  | XLXN_1<7>  | XLXN_1<2>  | XLXN_1<3>  | XLXN_1<5>  | XLXI_1/state_FSM_FFd2  | y_OBUF.EXP
+INPUTMC | 14 | 1 | 0 | 0 | 5 | 1 | 17 | 1 | 14 | 0 | 7 | 0 | 11 | 0 | 10 | 2 | 17 | 2 | 16 | 0 | 9 | 0 | 8 | 0 | 6 | 1 | 16 | 1 | 1
+INPUTP | 1 | 92
+IMPORTS | 1 | 1 | 1
+EQ | 38 | 
+   XLXI_1/state_FSM_FFd4.D = !Reset & XLXI_1/state_FSM_FFd4 & !XLXN_2
+	# !Reset & !XLXI_1/state_FSM_FFd3 & 
+	XLXI_1/state_FSM_FFd1 & XLXI_1/state_FSM_FFd4 & XLXN_1<4> & !XLXN_1<0> & 
+	!XLXN_1<1> & !XLXN_1<6> & !XLXN_1<7> & XLXN_1<2> & XLXN_1<3> & 
+	!XLXN_1<5>
+	# !Reset & XLXI_1/state_FSM_FFd1 & 
+	XLXI_1/state_FSM_FFd2 & XLXN_1<4> & !XLXN_1<0> & !XLXN_1<1> & !XLXN_1<6> & 
+	!XLXN_1<7> & XLXN_2 & XLXN_1<2> & XLXN_1<3> & !XLXN_1<5>
+	# !Reset & XLXI_1/state_FSM_FFd3 & 
+	!XLXI_1/state_FSM_FFd1 & !XLXI_1/state_FSM_FFd2 & XLXN_1<4> & !XLXN_1<0> & 
+	!XLXN_1<1> & !XLXN_1<6> & !XLXN_1<7> & XLXN_2 & XLXN_1<2> & 
+	XLXN_1<3> & !XLXN_1<5>
+	# !Reset & XLXI_1/state_FSM_FFd3 & 
+	XLXI_1/state_FSM_FFd2 & !XLXI_1/state_FSM_FFd4 & XLXN_1<4> & !XLXN_1<0> & 
+	!XLXN_1<1> & !XLXN_1<6> & !XLXN_1<7> & XLXN_2 & XLXN_1<2> & 
+	XLXN_1<3> & !XLXN_1<5>
+;Imported pterms FB2_2
+	# !Reset & XLXI_1/state_FSM_FFd3 & 
+	XLXI_1/state_FSM_FFd1 & !XLXI_1/state_FSM_FFd4 & XLXN_1<4> & !XLXN_1<0> & 
+	!XLXN_1<1> & XLXN_1<6> & XLXN_1<7> & XLXN_2 & !XLXN_1<2> & 
+	!XLXN_1<3> & XLXN_1<5>
+	# !Reset & XLXI_1/state_FSM_FFd3 & 
+	XLXI_1/state_FSM_FFd2 & !XLXI_1/state_FSM_FFd4 & !XLXN_1<4> & XLXN_1<0> & 
+	!XLXN_1<1> & !XLXN_1<6> & !XLXN_1<7> & XLXN_2 & !XLXN_1<2> & 
+	!XLXN_1<3> & XLXN_1<5>
+	# !Reset & !XLXI_1/state_FSM_FFd1 & 
+	!XLXI_1/state_FSM_FFd2 & !XLXI_1/state_FSM_FFd4 & XLXN_1<4> & !XLXN_1<0> & 
+	!XLXN_1<1> & !XLXN_1<6> & !XLXN_1<7> & XLXN_2 & XLXN_1<2> & 
+	XLXN_1<3> & !XLXN_1<5>
+	# !Reset & !XLXI_1/state_FSM_FFd3 & 
+	XLXI_1/state_FSM_FFd1 & !XLXI_1/state_FSM_FFd2 & !XLXI_1/state_FSM_FFd4 & 
+	!XLXN_1<4> & XLXN_1<0> & !XLXN_1<1> & !XLXN_1<6> & !XLXN_1<7> & 
+	XLXN_2 & !XLXN_1<2> & !XLXN_1<3> & XLXN_1<5>
+	# !Reset & !XLXI_1/state_FSM_FFd3 & 
+	!XLXI_1/state_FSM_FFd1 & XLXI_1/state_FSM_FFd2 & !XLXI_1/state_FSM_FFd4 & 
+	XLXN_1<4> & !XLXN_1<0> & !XLXN_1<1> & XLXN_1<6> & XLXN_1<7> & 
+	XLXN_2 & !XLXN_1<2> & !XLXN_1<3> & XLXN_1<5>;
+   XLXI_1/state_FSM_FFd4.CLK = CLK;	// GCK
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 0 | 7 | XLXN_1<4>
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 7 | 1 | 17 | 1 | 14 | 1 | 16 | 1 | 0 | 0 | 8 | 1 | 1 | 1 | 15
+INPUTS | 2 | XLXN_1<5>  | PS2_Clk
+INPUTMC | 1 | 0 | 6
+INPUTP | 1 | 13
+EQ | 2 | 
+   XLXN_1<4>.D = XLXN_1<5>;
+   XLXN_1<4>.CLK = !PS2_Clk;
+
+MACROCELL | 0 | 11 | XLXN_1<0>
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 6 | 1 | 17 | 1 | 14 | 1 | 16 | 1 | 0 | 1 | 1 | 1 | 15
+INPUTS | 2 | XLXN_1<1>  | PS2_Clk
+INPUTMC | 1 | 0 | 10
+INPUTP | 1 | 13
+EQ | 2 | 
+   XLXN_1<0>.D = XLXN_1<1>;
+   XLXN_1<0>.CLK = !PS2_Clk;
+
+MACROCELL | 0 | 10 | XLXN_1<1>
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 7 | 1 | 17 | 1 | 14 | 1 | 16 | 1 | 0 | 0 | 11 | 1 | 1 | 1 | 15
+INPUTS | 2 | XLXN_1<2>  | PS2_Clk
+INPUTMC | 1 | 0 | 9
+INPUTP | 1 | 13
+EQ | 2 | 
+   XLXN_1<1>.D = XLXN_1<2>;
+   XLXN_1<1>.CLK = !PS2_Clk;
+
+MACROCELL | 2 | 17 | XLXN_1<6>
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 7 | 1 | 17 | 1 | 14 | 1 | 16 | 1 | 0 | 0 | 6 | 1 | 1 | 1 | 15
+INPUTS | 2 | XLXN_1<7>  | PS2_Clk
+INPUTMC | 1 | 2 | 16
+INPUTP | 1 | 13
+EQ | 2 | 
+   XLXN_1<6>.D = XLXN_1<7>;
+   XLXN_1<6>.CLK = !PS2_Clk;
+
+MACROCELL | 2 | 16 | XLXN_1<7>
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 7 | 1 | 17 | 1 | 14 | 1 | 16 | 1 | 0 | 2 | 17 | 1 | 1 | 1 | 15
+INPUTS | 2 | XLXI_2/reg10b<8>  | PS2_Clk
+INPUTMC | 1 | 0 | 13
+INPUTP | 1 | 13
+EQ | 2 | 
+   XLXN_1<7>.D = XLXI_2/reg10b<8>;
+   XLXN_1<7>.CLK = !PS2_Clk;
+
+MACROCELL | 0 | 5 | XLXN_2
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 7 | 1 | 17 | 1 | 14 | 1 | 16 | 1 | 0 | 1 | 13 | 1 | 1 | 1 | 15
+INPUTS | 4 | XLXI_2/Cnt<0>  | XLXI_2/Cnt<1>  | XLXI_2/Cnt<2>  | XLXI_2/Cnt<3>
+INPUTMC | 4 | 0 | 14 | 0 | 17 | 0 | 16 | 0 | 15
+EQ | 3 | 
+   XLXN_2.D = XLXI_2/Cnt<0> & XLXI_2/Cnt<1> & !XLXI_2/Cnt<2> & 
+	XLXI_2/Cnt<3>;
+   XLXN_2.CLK = CLK;	// GCK
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 0 | 9 | XLXN_1<2>
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 7 | 1 | 17 | 1 | 14 | 1 | 16 | 1 | 0 | 0 | 10 | 1 | 1 | 1 | 15
+INPUTS | 2 | XLXN_1<3>  | PS2_Clk
+INPUTMC | 1 | 0 | 8
+INPUTP | 1 | 13
+EQ | 2 | 
+   XLXN_1<2>.D = XLXN_1<3>;
+   XLXN_1<2>.CLK = !PS2_Clk;
+
+MACROCELL | 0 | 8 | XLXN_1<3>
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 7 | 1 | 17 | 1 | 14 | 1 | 16 | 1 | 0 | 0 | 9 | 1 | 1 | 1 | 15
+INPUTS | 2 | XLXN_1<4>  | PS2_Clk
+INPUTMC | 1 | 0 | 7
+INPUTP | 1 | 13
+EQ | 2 | 
+   XLXN_1<3>.D = XLXN_1<4>;
+   XLXN_1<3>.CLK = !PS2_Clk;
+
+MACROCELL | 0 | 6 | XLXN_1<5>
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 7 | 1 | 17 | 1 | 14 | 1 | 16 | 1 | 0 | 0 | 7 | 1 | 1 | 1 | 15
+INPUTS | 2 | XLXN_1<6>  | PS2_Clk
+INPUTMC | 1 | 2 | 17
+INPUTP | 1 | 13
+EQ | 2 | 
+   XLXN_1<5>.D = XLXN_1<6>;
+   XLXN_1<5>.CLK = !PS2_Clk;
+
+MACROCELL | 0 | 13 | XLXI_2/reg10b<8>
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 1 | 2 | 16
+INPUTS | 2 | XLXI_2/reg10b<9>  | PS2_Clk
+INPUTMC | 1 | 0 | 12
+INPUTP | 1 | 13
+EQ | 2 | 
+   XLXI_2/reg10b<8>.D = XLXI_2/reg10b<9>;
+   XLXI_2/reg10b<8>.CLK = !PS2_Clk;
+
+MACROCELL | 0 | 12 | XLXI_2/reg10b<9>
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 1 | 0 | 13
+INPUTS | 2 | PS2_Data  | PS2_Clk
+INPUTP | 2 | 12 | 13
+EQ | 2 | 
+   XLXI_2/reg10b<9>.D = PS2_Data;
+   XLXI_2/reg10b<9>.CLK = !PS2_Clk;
+
+MACROCELL | 1 | 1 | y_OBUF
+ATTRIBUTES | 264962 | 0
+OUTPUTMC | 1 | 1 | 0
+INPUTS | 15 | Reset  | XLXI_1/state_FSM_FFd3  | XLXI_1/state_FSM_FFd1  | XLXI_1/state_FSM_FFd4  | XLXN_1<4>  | XLXN_1<0>  | XLXN_1<1>  | XLXN_1<6>  | XLXN_1<7>  | XLXN_2  | XLXN_1<2>  | XLXN_1<3>  | XLXN_1<5>  | XLXI_1/state_FSM_FFd2  | EXP10_.EXP
+INPUTMC | 14 | 1 | 17 | 1 | 14 | 1 | 0 | 0 | 7 | 0 | 11 | 0 | 10 | 2 | 17 | 2 | 16 | 0 | 5 | 0 | 9 | 0 | 8 | 0 | 6 | 1 | 16 | 1 | 2
+INPUTP | 1 | 92
+EXPORTS | 1 | 1 | 0
+IMPORTS | 1 | 1 | 2
+EQ | 22 | 
+   y = ;Imported pterms FB2_3
+	  XLXI_1/state_FSM_FFd1 & XLXI_1/state_FSM_FFd2;
+    y_OBUF.EXP  =  !Reset & XLXI_1/state_FSM_FFd3 & 
+	XLXI_1/state_FSM_FFd1 & !XLXI_1/state_FSM_FFd4 & XLXN_1<4> & !XLXN_1<0> & 
+	!XLXN_1<1> & XLXN_1<6> & XLXN_1<7> & XLXN_2 & !XLXN_1<2> & 
+	!XLXN_1<3> & XLXN_1<5>
+	# !Reset & XLXI_1/state_FSM_FFd3 & 
+	XLXI_1/state_FSM_FFd2 & !XLXI_1/state_FSM_FFd4 & !XLXN_1<4> & XLXN_1<0> & 
+	!XLXN_1<1> & !XLXN_1<6> & !XLXN_1<7> & XLXN_2 & !XLXN_1<2> & 
+	!XLXN_1<3> & XLXN_1<5>
+	# !Reset & !XLXI_1/state_FSM_FFd1 & 
+	!XLXI_1/state_FSM_FFd2 & !XLXI_1/state_FSM_FFd4 & XLXN_1<4> & !XLXN_1<0> & 
+	!XLXN_1<1> & !XLXN_1<6> & !XLXN_1<7> & XLXN_2 & XLXN_1<2> & 
+	XLXN_1<3> & !XLXN_1<5>
+	# !Reset & !XLXI_1/state_FSM_FFd3 & 
+	XLXI_1/state_FSM_FFd1 & !XLXI_1/state_FSM_FFd2 & !XLXI_1/state_FSM_FFd4 & 
+	!XLXN_1<4> & XLXN_1<0> & !XLXN_1<1> & !XLXN_1<6> & !XLXN_1<7> & 
+	XLXN_2 & !XLXN_1<2> & !XLXN_1<3> & XLXN_1<5>
+	# !Reset & !XLXI_1/state_FSM_FFd3 & 
+	!XLXI_1/state_FSM_FFd1 & XLXI_1/state_FSM_FFd2 & !XLXI_1/state_FSM_FFd4 & 
+	XLXN_1<4> & !XLXN_1<0> & !XLXN_1<1> & XLXN_1<6> & XLXN_1<7> & 
+	XLXN_2 & !XLXN_1<2> & !XLXN_1<3> & XLXN_1<5>
+
+MACROCELL | 1 | 13 | XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 4 | 0 | 14 | 0 | 17 | 0 | 16 | 0 | 15
+INPUTS | 2 | Reset  | XLXN_2
+INPUTMC | 1 | 0 | 5
+INPUTP | 1 | 92
+EQ | 1 | 
+   XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT = !Reset & !XLXN_2;
+
+MACROCELL | 1 | 2 | EXP10_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 1 | 1
+INPUTS | 2 | XLXI_1/state_FSM_FFd1  | XLXI_1/state_FSM_FFd2
+INPUTMC | 2 | 1 | 14 | 1 | 16
+EXPORTS | 1 | 1 | 1
+EQ | 1 | 
+       EXP10_.EXP  =  XLXI_1/state_FSM_FFd1 & XLXI_1/state_FSM_FFd2
+
+MACROCELL | 1 | 15 | EXP11_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 1 | 16
+INPUTS | 14 | Reset  | XLXI_1/state_FSM_FFd3  | XLXI_1/state_FSM_FFd1  | XLXI_1/state_FSM_FFd4  | XLXN_1<4>  | XLXN_1<0>  | XLXN_1<1>  | XLXN_1<6>  | XLXN_1<7>  | XLXN_2  | XLXN_1<2>  | XLXN_1<3>  | XLXN_1<5>  | XLXI_1/state_FSM_FFd2
+INPUTMC | 13 | 1 | 17 | 1 | 14 | 1 | 0 | 0 | 7 | 0 | 11 | 0 | 10 | 2 | 17 | 2 | 16 | 0 | 5 | 0 | 9 | 0 | 8 | 0 | 6 | 1 | 16
+INPUTP | 1 | 92
+EXPORTS | 1 | 1 | 16
+EQ | 12 | 
+       EXP11_.EXP  =  !Reset & XLXI_1/state_FSM_FFd3 & 
+	XLXI_1/state_FSM_FFd1 & XLXI_1/state_FSM_FFd4 & !XLXN_1<4> & XLXN_1<0> & 
+	XLXN_1<1> & !XLXN_1<6> & !XLXN_1<7> & XLXN_2 & !XLXN_1<2> & 
+	!XLXN_1<3> & XLXN_1<5>
+	# !Reset & !XLXI_1/state_FSM_FFd3 & 
+	!XLXI_1/state_FSM_FFd1 & XLXI_1/state_FSM_FFd2 & !XLXI_1/state_FSM_FFd4 & 
+	XLXN_1<4> & !XLXN_1<0> & !XLXN_1<1> & XLXN_1<6> & XLXN_1<7> & 
+	!XLXN_1<2> & !XLXN_1<3> & XLXN_1<5>
+	# !Reset & XLXI_1/state_FSM_FFd3 & 
+	!XLXI_1/state_FSM_FFd1 & !XLXI_1/state_FSM_FFd2 & XLXI_1/state_FSM_FFd4 & 
+	XLXN_1<4> & !XLXN_1<0> & XLXN_1<1> & !XLXN_1<6> & !XLXN_1<7> & 
+	XLXN_2 & !XLXN_1<2> & !XLXN_1<3> & XLXN_1<5>
+
+PIN | PS2_Clk | 64 | 0 | N/A | 13 | 14 | 0 | 14 | 0 | 17 | 0 | 16 | 0 | 15 | 0 | 7 | 0 | 11 | 0 | 10 | 2 | 17 | 2 | 16 | 0 | 9 | 0 | 8 | 0 | 6 | 0 | 13 | 0 | 12
+PIN | CLK | 4096 | 0 | N/A | 20 | 5 | 1 | 17 | 1 | 14 | 1 | 16 | 1 | 0 | 0 | 5
+PIN | Reset | 64 | 0 | N/A | 92 | 7 | 1 | 17 | 1 | 14 | 1 | 16 | 1 | 0 | 1 | 13 | 1 | 1 | 1 | 15
+PIN | PS2_Data | 64 | 0 | N/A | 12 | 1 | 0 | 12
+PIN | y | 536871040 | 0 | N/A | 87

@@ -1,0 +1,237 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+</td></tr><tr><td>
+D7S_S(0) <= ((NOT wej(1) AND wej(2) AND NOT wej(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT wej(1) AND NOT wej(2) AND wej(0)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+D7S_S(1) <= ((wej(1) AND wej(2) AND NOT wej(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT wej(1) AND wej(2) AND wej(0)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+D7S_S(2) <= (wej(1) AND NOT wej(2) AND NOT wej(0));
+</td></tr><tr><td>
+</td></tr><tr><td>
+D7S_S(3) <= ((wej(1) AND wej(2) AND wej(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT wej(1) AND wej(2) AND NOT wej(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT wej(1) AND NOT wej(2) AND wej(0)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+D7S_S(4) <= ((wej(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT wej(1) AND wej(2)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+D7S_S(5) <= ((wej(1) AND NOT wej(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT wej(2) AND wej(0)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+D7S_S(6) <= ((NOT wej(1) AND NOT wej(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (wej(1) AND wej(2) AND wej(0)));
+</td></tr><tr><td>
+FDCPE_DO0: FDCPE port map (DO(0),DO_D(0),CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DO_D(0) <= ((NOT DO(0) AND XLXI_4/Cnt(0) AND RS_RX)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT DO(0) AND NOT XLXI_4/Cnt(2) AND RS_RX)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT DO(0) AND XLXI_4/Cnt(3) AND RS_RX)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_4/Busy AND NOT DO(1) AND NOT XLXI_4/Cnt(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_4/Cnt(1) AND XLXI_4/Cnt(2) AND NOT XLXI_4/Cnt(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT DO(1) AND NOT XLXI_4/Cnt(0) AND XLXI_4/Cnt(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_4/Cnt(2) AND NOT XLXI_4/Cnt(3) AND RS_RX)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT DO(0) AND DO(1) AND NOT DO(2) AND NOT DO(3) AND DO(4) AND DO(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DO(6) AND NOT DO(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_4/Busy AND NOT DO(0) AND XLXI_4/Cnt(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_4/Busy AND NOT DO(0) AND NOT XLXI_4/Cnt(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_4/Busy AND NOT DO(0) AND NOT XLXI_4/Cnt(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_4/Busy AND NOT DO(0) AND XLXI_4/Cnt(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT DO(0) AND NOT XLXI_4/Cnt(1) AND RS_RX));
+</td></tr><tr><td>
+FTCPE_DO1: FTCPE port map (DO(1),DO_T(1),CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DO_T(1) <= ((NOT XLXI_4/Busy AND NOT DO(1) AND NOT RS_RX)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT DO(1) AND DO(2) AND NOT XLXI_4/Cnt(0) AND XLXI_4/Cnt(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_4/Cnt(2) AND NOT XLXI_4/Cnt(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_4/Busy AND DO(1) AND NOT DO(2) AND NOT XLXI_4/Cnt(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_4/Cnt(1) AND XLXI_4/Cnt(2) AND NOT XLXI_4/Cnt(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (DO(1) AND NOT DO(2) AND NOT XLXI_4/Cnt(0) AND XLXI_4/Cnt(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_4/Cnt(2) AND NOT XLXI_4/Cnt(3) AND RS_RX)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT DO(0) AND DO(1) AND NOT DO(2) AND NOT DO(3) AND DO(4) AND DO(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DO(6) AND NOT DO(7)));
+</td></tr><tr><td>
+FTCPE_DO2: FTCPE port map (DO(2),DO_T(2),CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DO_T(2) <= ((DO(7).EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_4/Busy AND DO(0) AND NOT DO(2) AND NOT RS_RX)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_4/Busy AND NOT DO(1) AND NOT DO(2) AND NOT RS_RX)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_4/Busy AND NOT DO(2) AND NOT DO(6) AND NOT RS_RX)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_4/Busy AND NOT DO(2) AND DO(7) AND NOT RS_RX)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT DO(2) AND DO(3) AND NOT XLXI_4/Cnt(0) AND XLXI_4/Cnt(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_4/Cnt(2) AND NOT XLXI_4/Cnt(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_4/Busy AND NOT DO(2) AND DO(3) AND NOT RS_RX)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_4/Busy AND NOT DO(2) AND NOT DO(4) AND NOT RS_RX)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_4/Busy AND NOT DO(2) AND NOT DO(5) AND NOT RS_RX));
+</td></tr><tr><td>
+FDCPE_DO3: FDCPE port map (DO(3),DO_D(3),CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DO_D(3) <= ((NOT DO(3) AND NOT XLXI_4/Cnt(2) AND RS_RX)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT DO(3) AND XLXI_4/Cnt(0) AND RS_RX)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT DO(3) AND XLXI_4/Cnt(3) AND RS_RX)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_4/Busy AND NOT DO(4) AND NOT XLXI_4/Cnt(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_4/Cnt(1) AND XLXI_4/Cnt(2) AND NOT XLXI_4/Cnt(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT DO(4) AND NOT XLXI_4/Cnt(0) AND XLXI_4/Cnt(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_4/Cnt(2) AND NOT XLXI_4/Cnt(3) AND RS_RX)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT DO(0) AND DO(1) AND NOT DO(2) AND NOT DO(3) AND DO(4) AND DO(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DO(6) AND NOT DO(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_4/Busy AND NOT DO(3) AND XLXI_4/Cnt(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_4/Busy AND NOT DO(3) AND NOT XLXI_4/Cnt(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_4/Busy AND NOT DO(3) AND NOT XLXI_4/Cnt(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_4/Busy AND NOT DO(3) AND XLXI_4/Cnt(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT DO(3) AND NOT XLXI_4/Cnt(1) AND RS_RX));
+</td></tr><tr><td>
+FTCPE_DO4: FTCPE port map (DO(4),DO_T(4),CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DO_T(4) <= ((NOT XLXI_4/Busy AND NOT DO(4) AND NOT RS_RX)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT DO(4) AND DO(5) AND NOT XLXI_4/Cnt(0) AND XLXI_4/Cnt(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_4/Cnt(2) AND NOT XLXI_4/Cnt(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_4/Busy AND DO(4) AND NOT DO(5) AND NOT XLXI_4/Cnt(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_4/Cnt(1) AND XLXI_4/Cnt(2) AND NOT XLXI_4/Cnt(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (DO(4) AND NOT DO(5) AND NOT XLXI_4/Cnt(0) AND XLXI_4/Cnt(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_4/Cnt(2) AND NOT XLXI_4/Cnt(3) AND RS_RX)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT DO(0) AND DO(1) AND NOT DO(2) AND NOT DO(3) AND DO(4) AND DO(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DO(6) AND NOT DO(7)));
+</td></tr><tr><td>
+FTCPE_DO5: FTCPE port map (DO(5),DO_T(5),CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DO_T(5) <= ((NOT XLXI_4/Busy AND NOT DO(5) AND NOT RS_RX)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT DO(5) AND DO(6) AND NOT XLXI_4/Cnt(0) AND XLXI_4/Cnt(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_4/Cnt(2) AND NOT XLXI_4/Cnt(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_4/Busy AND DO(5) AND NOT DO(6) AND NOT XLXI_4/Cnt(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_4/Cnt(1) AND XLXI_4/Cnt(2) AND NOT XLXI_4/Cnt(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (DO(5) AND NOT DO(6) AND NOT XLXI_4/Cnt(0) AND XLXI_4/Cnt(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_4/Cnt(2) AND NOT XLXI_4/Cnt(3) AND RS_RX)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT DO(0) AND DO(1) AND NOT DO(2) AND NOT DO(3) AND DO(4) AND DO(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DO(6) AND NOT DO(7)));
+</td></tr><tr><td>
+FTCPE_DO6: FTCPE port map (DO(6),DO_T(6),CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DO_T(6) <= ((NOT XLXI_4/Busy AND NOT DO(6) AND NOT RS_RX)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT DO(6) AND DO(7) AND NOT XLXI_4/Cnt(0) AND XLXI_4/Cnt(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_4/Cnt(2) AND NOT XLXI_4/Cnt(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_4/Busy AND DO(6) AND NOT DO(7) AND NOT XLXI_4/Cnt(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_4/Cnt(1) AND XLXI_4/Cnt(2) AND NOT XLXI_4/Cnt(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (DO(6) AND NOT DO(7) AND NOT XLXI_4/Cnt(0) AND XLXI_4/Cnt(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_4/Cnt(2) AND NOT XLXI_4/Cnt(3) AND RS_RX)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT DO(0) AND DO(1) AND NOT DO(2) AND NOT DO(3) AND DO(4) AND DO(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DO(6) AND NOT DO(7)));
+</td></tr><tr><td>
+FDCPE_DO7: FDCPE port map (DO(7),DO_D(7),CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DO_D(7) <= ((NOT DO(7) AND XLXI_4/Cnt(0) AND RS_RX)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT DO(7) AND XLXI_4/Cnt(3) AND RS_RX)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_4/Busy AND NOT XLXI_4/Cnt(0) AND XLXI_4/Cnt(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_4/Cnt(2) AND NOT XLXI_4/Cnt(3) AND NOT RS_RX)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT DO(0) AND DO(1) AND NOT DO(2) AND NOT DO(3) AND DO(4) AND DO(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DO(6) AND NOT DO(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_4/Busy AND NOT DO(7) AND NOT RS_RX)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT DO(7) AND NOT XLXI_4/Cnt(1) AND RS_RX)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT DO(7) AND NOT XLXI_4/Cnt(2) AND RS_RX));
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+FDCPE_XLXI_4/Busy: FDCPE port map (XLXI_4/Busy,XLXI_4/Busy_D,CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_4/Busy_D <= ((NOT XLXI_4/Busy AND RS_RX)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_4/sReg(0) AND NOT XLXI_4/Cnt(0) AND NOT XLXI_4/Cnt(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_4/Cnt(2) AND NOT XLXI_4/Cnt(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT DO(0) AND DO(1) AND NOT DO(2) AND NOT DO(3) AND DO(4) AND DO(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DO(6) AND NOT DO(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (DO(0) AND DO(1) AND DO(2) AND DO(3) AND DO(4) AND DO(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DO(6) AND DO(7) AND XLXI_4/sReg(0) AND XLXI_4/Cnt(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_4/Cnt(1) AND XLXI_4/Cnt(2) AND NOT XLXI_4/Cnt(3)));
+</td></tr><tr><td>
+FTCPE_XLXI_4/Cnt0: FTCPE port map (XLXI_4/Cnt(0),XLXI_4/Cnt_T(0),CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_4/Cnt_T(0) <= ((NOT XLXI_4/Busy AND NOT XLXI_4/Cnt(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT DO(0) AND DO(1) AND NOT DO(2) AND NOT DO(3) AND DO(4) AND DO(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DO(6) AND NOT DO(7) AND NOT XLXI_4/Cnt(0)));
+</td></tr><tr><td>
+FDCPE_XLXI_4/Cnt1: FDCPE port map (XLXI_4/Cnt(1),XLXI_4/Cnt_D(1),CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_4/Cnt_D(1) <= ((NOT XLXI_4/Busy)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_4/Cnt(0) AND XLXI_4/Cnt(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_4/Cnt(0) AND NOT XLXI_4/Cnt(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT DO(0) AND DO(1) AND NOT DO(2) AND NOT DO(3) AND DO(4) AND DO(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DO(6) AND NOT DO(7)));
+</td></tr><tr><td>
+FDCPE_XLXI_4/Cnt2: FDCPE port map (XLXI_4/Cnt(2),XLXI_4/Cnt_D(2),CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_4/Cnt_D(2) <= ((NOT XLXI_4/Busy)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_4/Cnt(0) AND NOT XLXI_4/Cnt(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_4/Cnt(1) AND NOT XLXI_4/Cnt(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_4/Cnt(0) AND XLXI_4/Cnt(1) AND XLXI_4/Cnt(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT DO(0) AND DO(1) AND NOT DO(2) AND NOT DO(3) AND DO(4) AND DO(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DO(6) AND NOT DO(7)));
+</td></tr><tr><td>
+FDCPE_XLXI_4/Cnt3: FDCPE port map (XLXI_4/Cnt(3),XLXI_4/Cnt_D(3),CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_4/Cnt_D(3) <= ((NOT XLXI_4/Busy)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_4/Cnt(0) AND NOT XLXI_4/Cnt(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_4/Cnt(1) AND NOT XLXI_4/Cnt(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_4/Cnt(2) AND NOT XLXI_4/Cnt(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_4/Cnt(0) AND XLXI_4/Cnt(1) AND XLXI_4/Cnt(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_4/Cnt(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT DO(0) AND DO(1) AND NOT DO(2) AND NOT DO(3) AND DO(4) AND DO(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DO(6) AND NOT DO(7)));
+</td></tr><tr><td>
+FDCPE_XLXI_4/sReg0: FDCPE port map (XLXI_4/sReg(0),XLXI_4/sReg_D(0),CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_4/sReg_D(0) <= ((DO(2).EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_4/sReg(0) AND XLXI_4/Cnt(0) AND RS_RX)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_4/sReg(0) AND NOT XLXI_4/Cnt(1) AND RS_RX)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_4/sReg(0) AND NOT XLXI_4/Cnt(2) AND RS_RX)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_4/sReg(0) AND XLXI_4/Cnt(3) AND RS_RX)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_4/Busy AND NOT DO(0) AND NOT XLXI_4/Cnt(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_4/Cnt(1) AND XLXI_4/Cnt(2) AND NOT XLXI_4/Cnt(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_4/Busy AND NOT XLXI_4/sReg(0) AND XLXI_4/Cnt(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_4/Busy AND NOT XLXI_4/sReg(0) AND NOT XLXI_4/Cnt(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_4/Busy AND NOT XLXI_4/sReg(0) AND NOT XLXI_4/Cnt(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_4/Busy AND NOT XLXI_4/sReg(0) AND XLXI_4/Cnt(3)));
+</td></tr><tr><td>
+FDCPE_XLXN_22: FDCPE port map (XLXN_22,XLXN_22_D,CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXN_22_D <= (NOT XLXI_4/sReg(0) AND XLXI_4/Cnt(0) AND XLXI_4/Cnt(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_4/Cnt(2) AND NOT XLXI_4/Cnt(3));
+</td></tr><tr><td>
+FDCPE_wej0: FDCPE port map (wej(0),wej_D(0),CLK,wej_CLR(0),'0',wej_CE(0));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wej_D(0) <= ((wej(1) AND NOT wej(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT wej(1) AND wej(2)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wej_CLR(0) <= (NOT DO(0) AND DO(1) AND NOT DO(2) AND NOT DO(3) AND DO(4) AND DO(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DO(6) AND NOT DO(7));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wej_CE(0) <= (DO(0) AND NOT DO(1) AND NOT DO(2) AND DO(3) AND NOT DO(4) AND DO(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DO(6) AND NOT DO(7) AND XLXN_22);
+</td></tr><tr><td>
+FDCPE_wej1: FDCPE port map (wej(1),wej_D(1),CLK,wej_CLR(1),'0',wej_CE(1));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wej_D(1) <= ((wej(1) AND NOT wej(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT wej(1) AND NOT wej(2)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wej_CLR(1) <= (NOT DO(0) AND DO(1) AND NOT DO(2) AND NOT DO(3) AND DO(4) AND DO(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DO(6) AND NOT DO(7));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wej_CE(1) <= (DO(0) AND NOT DO(1) AND NOT DO(2) AND DO(3) AND NOT DO(4) AND DO(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DO(6) AND NOT DO(7) AND XLXN_22);
+</td></tr><tr><td>
+FTCPE_wej2: FTCPE port map (wej(2),wej(0),CLK,wej_CLR(2),'0',wej_CE(2));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wej_CLR(2) <= (NOT DO(0) AND DO(1) AND NOT DO(2) AND NOT DO(3) AND DO(4) AND DO(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DO(6) AND NOT DO(7));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wej_CE(2) <= (DO(0) AND NOT DO(1) AND NOT DO(2) AND DO(3) AND NOT DO(4) AND DO(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DO(6) AND NOT DO(7) AND XLXN_22);
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

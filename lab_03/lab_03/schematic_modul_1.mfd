@@ -1,0 +1,77 @@
+MDF Database:  version 1.0
+MDF_INFO | schematic_modul_1 | XC9572XL-10-PC44
+MACROCELL | 2 | 7 | D7S_S_1_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 4 | X<2>  | X<1>  | X<3>  | X<0>
+INPUTP | 4 | 9 | 3 | 90 | 7
+EQ | 3 | 
+   D7S_S<1> = X<0> & !X<2> & X<3>
+	# !X<0> & !X<1> & X<3>
+	# !X<2> & X<1> & !X<3>;
+
+MACROCELL | 2 | 16 | D7S_S_2_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 4 | X<0>  | X<1>  | X<3>  | X<2>
+INPUTP | 4 | 7 | 3 | 90 | 9
+EQ | 3 | 
+   D7S_S<2> = X<0> & !X<2> & X<3>
+	# X<0> & X<1> & X<3>
+	# !X<0> & X<2> & !X<1> & X<3>;
+
+MACROCELL | 2 | 13 | D7S_S_3_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 4 | X<0>  | X<2>  | X<3>  | X<1>
+INPUTP | 4 | 7 | 9 | 90 | 3
+EQ | 4 | 
+   D7S_S<3> = !X<0> & X<2> & !X<1>
+	# !X<0> & X<2> & X<3>
+	# X<0> & X<2> & X<1> & !X<3>
+	# X<0> & !X<2> & !X<1> & !X<3>;
+
+MACROCELL | 2 | 4 | D7S_S_0_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 4 | X<0>  | X<2>  | X<3>  | X<1>
+INPUTP | 4 | 7 | 9 | 90 | 3
+EQ | 3 | 
+   D7S_S<0> = !X<0> & !X<2> & X<3>
+	# !X<0> & X<1> & X<3>
+	# X<0> & !X<2> & !X<1> & !X<3>;
+
+MACROCELL | 2 | 8 | D7S_S_4_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 4 | X<0>  | X<3>  | X<2>  | X<1>
+INPUTP | 4 | 7 | 90 | 9 | 3
+EQ | 3 | 
+   D7S_S<4> = !X<0> & !X<3>
+	# !X<0> & X<2> & X<1>
+	# !X<2> & !X<1> & !X<3>;
+
+MACROCELL | 2 | 1 | D7S_S_5_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 4 | X<0>  | X<1>  | X<3>  | X<2>
+INPUTP | 4 | 7 | 3 | 90 | 9
+EQ | 3 | 
+   D7S_S<5> = !X<0> & X<1> & X<3>
+	# X<2> & X<1> & X<3>
+	# !X<0> & !X<2> & !X<1> & !X<3>;
+
+MACROCELL | 2 | 14 | D7S_S_6_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 4 | X<0>  | X<1>  | X<3>  | X<2>
+INPUTP | 4 | 7 | 3 | 90 | 9
+EQ | 3 | 
+   D7S_S<6> = X<0> & !X<1> & X<3>
+	# !X<0> & X<2> & X<1> & X<3>
+	# !X<0> & X<2> & !X<1> & !X<3>;
+
+PIN | X<0> | 64 | 0 | N/A | 7 | 7 | 2 | 7 | 2 | 16 | 2 | 13 | 2 | 4 | 2 | 8 | 2 | 1 | 2 | 14
+PIN | X<2> | 64 | 0 | N/A | 9 | 7 | 2 | 7 | 2 | 16 | 2 | 13 | 2 | 4 | 2 | 8 | 2 | 1 | 2 | 14
+PIN | X<1> | 64 | 0 | N/A | 3 | 7 | 2 | 7 | 2 | 16 | 2 | 13 | 2 | 4 | 2 | 8 | 2 | 1 | 2 | 14
+PIN | X<3> | 64 | 0 | N/A | 90 | 7 | 2 | 7 | 2 | 16 | 2 | 13 | 2 | 4 | 2 | 8 | 2 | 1 | 2 | 14
+PIN | D7S_S<1> | 536871040 | 0 | N/A | 33
+PIN | D7S_S<2> | 536871040 | 0 | N/A | 52
+PIN | D7S_S<3> | 536871040 | 0 | N/A | 49
+PIN | D7S_S<0> | 536871040 | 0 | N/A | 31
+PIN | D7S_S<4> | 536871040 | 0 | N/A | 38
+PIN | D7S_S<5> | 536871040 | 0 | N/A | 29
+PIN | D7S_S<6> | 536871040 | 0 | N/A | 50

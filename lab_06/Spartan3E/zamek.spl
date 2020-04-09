@@ -1,0 +1,10 @@
+[Inputs]
+CLK
+Reset
+DO_Rdy
+F0
+=x[7:0]=
+[Outputs]
+y
+=nr[3:0]=
+[BiDir]

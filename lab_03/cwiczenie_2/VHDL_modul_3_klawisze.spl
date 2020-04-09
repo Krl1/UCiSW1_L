@@ -1,0 +1,7 @@
+[Inputs]
+RD
+=WEJ[7:0]=
+[Outputs]
+CLR
+CE
+[BiDir]

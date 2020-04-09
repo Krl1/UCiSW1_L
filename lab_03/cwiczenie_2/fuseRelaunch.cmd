@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/lab/Desktop/pn_11_lab_03/cwiczenie_2/vhdl_modul_2_tb_isim_beh.exe" -prj "C:/Users/lab/Desktop/pn_11_lab_03/cwiczenie_2/vhdl_modul_2_tb_beh.prj" "work.vhdl_modul_2_tb" 

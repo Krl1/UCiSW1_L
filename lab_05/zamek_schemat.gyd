@@ -1,0 +1,23 @@
+Pin Freeze File:  version P.20131013
+
+9572XL44PC XC9572XL-10-PC44
+CLK S:PIN5
+PS2_Clk S:PIN3
+PS2_Data S:PIN2
+Reset S:PIN39
+y S:PIN35
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+PARTITION FB1_6 XLXN_2 XLXN_1<5> XLXN_1<4> XLXN_1<3>
+		 XLXN_1<2> XLXN_1<1> XLXN_1<0> XLXI_2/reg10b<9>
+		 XLXI_2/reg10b<8> XLXI_2/Cnt<0> XLXI_2/Cnt<3> XLXI_2/Cnt<2>
+		 XLXI_2/Cnt<1>
+PARTITION FB2_1 XLXI_1/state_FSM_FFd4 y_OBUF EXP10_
+PARTITION FB2_14 XLXI_2/Cnt<2>/XLXI_2/Cnt<2>_RSTF__$INT XLXI_1/state_FSM_FFd1 EXP11_ XLXI_1/state_FSM_FFd2
+		 XLXI_1/state_FSM_FFd3
+PARTITION FB3_17 XLXN_1<7> XLXN_1<6>
+
+

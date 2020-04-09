@@ -1,0 +1,54 @@
+MDF Database:  version 1.0
+MDF_INFO | zad_2 | XC9572XL-10-PC44
+MACROCELL | 1 | 17 | state_FSM_FFd2
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 4 | 1 | 17 | 1 | 15 | 1 | 16 | 1 | 1
+INPUTS | 5 | X  | CLR  | state_FSM_FFd1  | state_FSM_FFd3  | state_FSM_FFd2
+INPUTMC | 3 | 1 | 15 | 1 | 16 | 1 | 17
+INPUTP | 2 | 7 | 92
+EQ | 5 | 
+   state_FSM_FFd2.D = X & !CLR & state_FSM_FFd1 & state_FSM_FFd3
+	# !X & !CLR & state_FSM_FFd2 & !state_FSM_FFd1
+	# !X & !CLR & state_FSM_FFd2 & state_FSM_FFd3
+	# !X & !CLR & !state_FSM_FFd1 & state_FSM_FFd3;
+   state_FSM_FFd2.CLK = CLK;	// GCK
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 1 | 15 | state_FSM_FFd1
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 4 | 1 | 17 | 1 | 15 | 1 | 16 | 1 | 1
+INPUTS | 5 | X  | CLR  | state_FSM_FFd2  | state_FSM_FFd1  | state_FSM_FFd3
+INPUTMC | 3 | 1 | 17 | 1 | 15 | 1 | 16
+INPUTP | 2 | 7 | 92
+EQ | 3 | 
+   state_FSM_FFd1.D = X & !CLR & state_FSM_FFd2 & state_FSM_FFd3
+	# X & !CLR & !state_FSM_FFd2 & state_FSM_FFd1;
+   state_FSM_FFd1.CLK = CLK;	// GCK
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 1 | 16 | state_FSM_FFd3
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 3 | 1 | 17 | 1 | 15 | 1 | 16
+INPUTS | 5 | X  | CLR  | state_FSM_FFd1  | state_FSM_FFd2  | state_FSM_FFd3
+INPUTMC | 3 | 1 | 15 | 1 | 17 | 1 | 16
+INPUTP | 2 | 7 | 92
+EQ | 6 | 
+   state_FSM_FFd3.D = !X & !CLR & state_FSM_FFd2
+	# !X & !CLR & state_FSM_FFd1
+	# !X & !CLR & !state_FSM_FFd3
+	# !CLR & !state_FSM_FFd2 & state_FSM_FFd1 & 
+	!state_FSM_FFd3;
+   state_FSM_FFd3.CLK = CLK;	// GCK
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 1 | 1 | Y_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 2 | state_FSM_FFd2  | state_FSM_FFd1
+INPUTMC | 2 | 1 | 17 | 1 | 15
+EQ | 1 | 
+   Y = state_FSM_FFd2 & state_FSM_FFd1;
+
+PIN | X | 64 | 0 | N/A | 7 | 3 | 1 | 17 | 1 | 15 | 1 | 16
+PIN | CLK | 16384 | 0 | N/A | 24 | 3 | 1 | 17 | 1 | 15 | 1 | 16
+PIN | CLR | 64 | 0 | N/A | 92 | 3 | 1 | 17 | 1 | 15 | 1 | 16
+PIN | Y | 536871040 | 0 | N/A | 87

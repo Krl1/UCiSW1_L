@@ -1,0 +1,5 @@
+MODULE schematic_modul_1
+	SUBMODULE vhdl_modul_1
+		INSTANCE XLXI_1
+	SUBMODULE HexTo7Seg
+		INSTANCE XLXI_2

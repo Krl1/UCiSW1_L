@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/lab/Desktop/nw/drugi/licznik_licznik_sch_tb_isim_fit.exe" -prj "C:/Users/lab/Desktop/nw/drugi/licznik_licznik_sch_tb_fit.prj" "work.licznik_licznik_sch_tb" 

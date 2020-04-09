@@ -1,0 +1,56 @@
+MDF Database:  version 1.0
+MDF_INFO | licznik | XC9572XL-10-PC44
+MACROCELL | 2 | 13 | Q_1_OBUF
+ATTRIBUTES | 8815442 | 0
+OUTPUTMC | 2 | 2 | 13 | 2 | 1
+INPUTS | 5 | Q<1>  | Q<2>  | Q<0>  | CLR  | CE
+INPUTMC | 3 | 2 | 13 | 0 | 1 | 2 | 1
+INPUTP | 2 | 3 | 7
+EQ | 5 | 
+   Q<1>.D = Q<1> & !Q<0>
+	# !Q<1> & !Q<2>;
+   Q<1>.CLK = CLK;	// GCK
+   Q<1>.AR = CLR;
+   Q<1>.CE = CE;
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 0 | 1 | Q_2_OBUF
+ATTRIBUTES | 4621138 | 0
+OUTPUTMC | 2 | 2 | 13 | 2 | 1
+INPUTS | 3 | Q<0>  | CLR  | CE
+INPUTMC | 1 | 2 | 1
+INPUTP | 2 | 3 | 7
+EQ | 4 | 
+   Q<2>.T = Q<0>;
+   Q<2>.CLK = CLK;	// GCK
+   Q<2>.AR = CLR;
+   Q<2>.CE = CE;
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 2 | 1 | Q_0_OBUF
+ATTRIBUTES | 8815442 | 0
+OUTPUTMC | 3 | 2 | 13 | 0 | 1 | 2 | 1
+INPUTS | 5 | Q<1>  | Q<2>  | Q<0>  | CLR  | CE
+INPUTMC | 3 | 2 | 13 | 0 | 1 | 2 | 1
+INPUTP | 2 | 3 | 7
+EQ | 5 | 
+   Q<0>.D = Q<1> & !Q<0>
+	# !Q<1> & Q<2>;
+   Q<0>.CLK = CLK;	// GCK
+   Q<0>.AR = CLR;
+   Q<0>.CE = CE;
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 3 | 1 | Q_3_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 0
+EQ | 1 | 
+   Q<3> = Gnd;
+
+PIN | CE | 64 | 0 | N/A | 7 | 3 | 2 | 13 | 0 | 1 | 2 | 1
+PIN | CLK | 16384 | 0 | N/A | 24 | 3 | 2 | 13 | 0 | 1 | 2 | 1
+PIN | CLR | 64 | 0 | N/A | 3 | 3 | 2 | 13 | 0 | 1 | 2 | 1
+PIN | Q<1> | 536871040 | 0 | N/A | 49
+PIN | Q<2> | 536871040 | 0 | N/A | 11
+PIN | Q<0> | 536871040 | 0 | N/A | 29
+PIN | Q<3> | 536871040 | 0 | N/A | 62
