@@ -1,0 +1,13 @@
+[Inputs]
+CLK
+Reset
+DO_Rdy
+F0
+Busy
+=x[7:0]=
+[Outputs]
+y
+we
+DnI
+=nr[7:0]=
+[BiDir]
